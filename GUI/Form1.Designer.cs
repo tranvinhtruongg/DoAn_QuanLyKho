@@ -29,6 +29,7 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
@@ -93,6 +94,7 @@ namespace GUI
             this.barSubItem4 = new DevExpress.XtraBars.BarSubItem();
             this.barSubItem5 = new DevExpress.XtraBars.BarSubItem();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -448,20 +450,17 @@ namespace GUI
             // 
             this.ribbonPageGroup12.ItemLinks.Add(this.barSubItem1);
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
-            this.ribbonPageGroup12.Text = "Nhập Kho";
             // 
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.barSubItem2);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "Danh Mục";
             // 
             // ribbonPageGroup10
             // 
             this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem25);
             this.ribbonPageGroup10.ItemLinks.Add(this.barSubItem6);
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
-            this.ribbonPageGroup10.Text = "Xuất Hàng";
             // 
             // ribbonPage4
             // 
@@ -478,25 +477,21 @@ namespace GUI
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.báo);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "Báo cáo cuối ngày";
             // 
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem4);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "Báo cáo cuối tháng";
             // 
             // ribbonPageGroup8
             // 
             this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem6);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
-            this.ribbonPageGroup8.Text = "Báo cáo cuối năm";
             // 
             // ribbonPageGroup9
             // 
             this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem8);
             this.ribbonPageGroup9.Name = "ribbonPageGroup9";
-            this.ribbonPageGroup9.Text = "kho";
             // 
             // ribbonPage5
             // 
@@ -511,13 +506,11 @@ namespace GUI
             // 
             this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem30);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            this.ribbonPageGroup5.Text = "Tra cứu";
             // 
             // ribbonPageGroup13
             // 
             this.ribbonPageGroup13.ItemLinks.Add(this.barButtonItem31);
             this.ribbonPageGroup13.Name = "ribbonPageGroup13";
-            this.ribbonPageGroup13.Text = "Vị Trí Sản Phẩm";
             // 
             // ribbonPage6
             // 
@@ -532,7 +525,6 @@ namespace GUI
             this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem16);
             this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem17);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
-            this.ribbonPageGroup6.Text = "Tài khoản";
             // 
             // ribbonPage7
             // 
@@ -547,7 +539,6 @@ namespace GUI
             this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem33);
             this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem34);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
-            this.ribbonPageGroup7.Text = "Trợ giúp";
             // 
             // ribbonPage1
             // 
@@ -562,7 +553,6 @@ namespace GUI
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem32);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem35);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "Thông tin phần mềm";
             // 
             // ribbonStatusBar
             // 
@@ -596,6 +586,11 @@ namespace GUI
             this.ribbonPageGroup11.ItemLinks.Add(this.barSubItem1);
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
             this.ribbonPageGroup11.Text = "ribbonPageGroup12";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // Form1
             // 
@@ -680,6 +675,7 @@ namespace GUI
         private DevExpress.XtraBars.BarButtonItem barButtonItem33;
         private DevExpress.XtraBars.BarButtonItem barButtonItem34;
         private DevExpress.XtraBars.BarButtonItem barButtonItem35;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 
