@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    class DBConnect
+    public class DBConnect
     {
         protected SqlConnection con = new SqlConnection("server=.\\MSSQLSERVER01; database=[Da_QLKho];integrated security=true");
     }
