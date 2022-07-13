@@ -15,10 +15,12 @@ namespace GUI
         {
             InitializeComponent();
         }
-        private void barButtonItem36_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+
+        private void btnNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             frmQuanLy frmQuanLy = new frmQuanLy();
             frmQuanLy.Show();
         }
+       
     }
 }

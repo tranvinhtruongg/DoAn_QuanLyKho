@@ -31,7 +31,7 @@ namespace GUI
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dtgvMH = new System.Windows.Forms.DataGridView();
+            this.dgvMH = new System.Windows.Forms.DataGridView();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
@@ -39,7 +39,7 @@ namespace GUI
             this.cbxMH = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvMH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMH)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -60,14 +60,14 @@ namespace GUI
             this.dataGridView2.Size = new System.Drawing.Size(800, 77);
             this.dataGridView2.TabIndex = 1;
             // 
-            // dtgvMH
+            // dgvMH
             // 
-            this.dtgvMH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvMH.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgvMH.Location = new System.Drawing.Point(0, 93);
-            this.dtgvMH.Name = "dtgvMH";
-            this.dtgvMH.Size = new System.Drawing.Size(800, 280);
-            this.dtgvMH.TabIndex = 2;
+            this.dgvMH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvMH.Location = new System.Drawing.Point(0, 93);
+            this.dgvMH.Name = "dgvMH";
+            this.dgvMH.Size = new System.Drawing.Size(800, 280);
+            this.dgvMH.TabIndex = 2;
             // 
             // btnThem
             // 
@@ -120,14 +120,14 @@ namespace GUI
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.dtgvMH);
+            this.Controls.Add(this.dgvMH);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmQuanLy";
             this.Text = "frmQuanLy";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvMH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMH)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -136,7 +136,7 @@ namespace GUI
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dtgvMH;
+        private System.Windows.Forms.DataGridView dgvMH;
         private DevExpress.XtraEditors.SimpleButton btnThem;
         private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraEditors.SimpleButton btnSua;

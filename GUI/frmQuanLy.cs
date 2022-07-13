@@ -22,7 +22,7 @@ namespace GUI
         void loadMH()
         {
             DataTable dt = bll.LayDSMatHang(cbxMH.Text);
-            dtgvMH.DataSource = dt;
+            dgvMH.DataSource = dt;
         }
         private void simpleButton4_Click(object sender, EventArgs e)
         {
