@@ -18,8 +18,16 @@ namespace GUI
 
         private void btnNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmQuanLy frmQuanLy = new frmQuanLy();
-            frmQuanLy.Show();
+            //frmQuanLy frmQuanLy = new frmQuanLy();
+            //frmQuanLy.Show();
+            try
+            {
+                int x = int.Parse("a");
+            }
+            catch (Exception Ex)
+            {
+                throw;
+            }
         }
        
     }

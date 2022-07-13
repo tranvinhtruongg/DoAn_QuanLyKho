@@ -9,6 +9,6 @@ namespace DAL
 {
     public class DBConnect
     {
-        protected SqlConnection con = new SqlConnection("server=.\\MSSQLSERVER01; database=[Da_QLKho];integrated security=true");
+        public SqlConnection con = new SqlConnection(@"Data source=DESKTOP-9FKG708\MSSQLSERVER01;Initial catalog=Da_QLKho;Integrated security=True");
     }
 }

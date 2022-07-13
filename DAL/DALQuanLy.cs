@@ -10,12 +10,25 @@ namespace DAL
 {
     public class DALQuanLy  :   DBConnect
     {
-        public DataTable LayDSMatHang(string ID)
+        public DataTable LayDSMatHang()
         {
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM MATHANG", con);
-            DataTable dtMatHang = new DataTable();
-            da.Fill(dtMatHang);
-            return dtMatHang;
+            DataTable dt = new DataTable();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM MATHANG", con);
+            try
+            {
+                SqlDataReader rd = cmd.ExecuteReader();
+                dt.Load(rd);
+                return dt;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        public DataTable ThemMatHang()
+        {
+            
         }
     }
 }

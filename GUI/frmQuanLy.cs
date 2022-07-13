@@ -21,7 +21,7 @@ namespace GUI
         }
         void loadMH()
         {
-            DataTable dt = bll.LayDSMatHang(cbxMH.Text);
+            DataTable dt = bll.LayDSMatHang();
             dgvMH.DataSource = dt;
         }
         private void simpleButton4_Click(object sender, EventArgs e)
@@ -34,6 +34,11 @@ namespace GUI
             //XoaTrangChiTiet();
             //Cam nhap
             //HienChiTiet(false);
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -11,9 +11,9 @@ namespace BLL
     public class BLLQuanLy
     {
         DALQuanLy dal = new DALQuanLy();
-        public DataTable LayDSMatHang(string ID)
+        public DataTable LayDSMatHang()
         {
-            return dal.LayDSMatHang(ID);
+            return dal.LayDSMatHang();
         }
     }
 }
