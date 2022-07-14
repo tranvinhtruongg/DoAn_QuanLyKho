@@ -24,21 +24,46 @@ namespace GUI
             DataTable dt = bll.LayDSMatHang();
             dgvMH.DataSource = dt;
         }
-        private void simpleButton4_Click(object sender, EventArgs e)
+
+        private void btnCancel_Click(object sender, EventArgs e)
         {
             //Thiết lập lại các nút như ban đầu
-            btnXoa.Enabled = false;
-            btnSua.Enabled = false;
-            btnThem.Enabled = true;
-            //xoa trang
-            //XoaTrangChiTiet();
-            //Cam nhap
-            //HienChiTiet(false);
+            txbTenMH.Text = "";
+            txbIDLH.Text = "";
+            txbMaMH.Text = "";   
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bll.ThemMatHang(txbMaMH.Text, txbTenMH.Text, txbIDLH.Text);
+                MessageBox.Show("Thêm thành công");
+                loadMH();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Thêm không thành công");
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmQuanLy_FormClosing(object sender, FormClosingEventArgs e)
+        {
+                DialogResult h = MessageBox.Show
+                ("Bạn có chắc muốn thoát không?", "Error", MessageBoxButtons.OKCancel);
+                if (h == DialogResult.OK)
+                Application.Exit();
         }
     }
 }
