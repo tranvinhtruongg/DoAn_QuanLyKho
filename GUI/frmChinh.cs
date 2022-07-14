@@ -15,20 +15,24 @@ namespace GUI
         {
             InitializeComponent();
         }
-
         private void btnNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //frmQuanLy frmQuanLy = new frmQuanLy();
-            //frmQuanLy.Show();
-            try
-            {
-                int x = int.Parse("a");
-            }
-            catch (Exception Ex)
-            {
-                throw;
-            }
+            frmQuanLy f = new frmQuanLy();
+            if (ExistForm(f)) return;
+            f.MdiParent = this;
+            f.Show();
         }
-       
+        public bool ExistForm(Form form)
+        {
+            foreach (var child in MdiChildren)
+            {
+                if (child.Name == form.Name)
+                {
+                    child.Activate();
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

@@ -12,23 +12,23 @@ namespace DAL
     {
         public DataTable LayDSMatHang()
         {
+            //DataTable dt = new DataTable();
+            //con.Open();
+            //SqlCommand cmd = new SqlCommand("SELECT * FROM MATHANG", con);
+            //try
+            //{
+            //    SqlDataReader rd = cmd.ExecuteReader();
+            //    dt.Load(rd);
+            //    return dt;
+            //}
+            //catch (Exception)
+            //{
+            //    throw;
+            //}
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM MATHANG", con);
             DataTable dt = new DataTable();
-            con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM MATHANG", con);
-            try
-            {
-                SqlDataReader rd = cmd.ExecuteReader();
-                dt.Load(rd);
-                return dt;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-        public DataTable ThemMatHang()
-        {
-            
+            da.Fill(dt);
+            return dt;
         }
     }
 }

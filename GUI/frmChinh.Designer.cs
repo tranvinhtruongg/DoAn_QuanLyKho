@@ -156,7 +156,7 @@ namespace GUI
             this.ribbonPage6,
             this.ribbonPage7,
             this.ribbonPage1});
-            this.ribbon.Size = new System.Drawing.Size(936, 177);
+            this.ribbon.Size = new System.Drawing.Size(978, 177);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // barButtonItem1
@@ -437,8 +437,8 @@ namespace GUI
             // 
             this.btnNhap.Caption = "Nhập Kho";
             this.btnNhap.Id = 49;
-            this.btnNhap.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem36.ImageOptions.Image")));
-            this.btnNhap.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem36.ImageOptions.LargeImage")));
+            this.btnNhap.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNhap.ImageOptions.Image")));
+            this.btnNhap.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNhap.ImageOptions.LargeImage")));
             this.btnNhap.Name = "btnNhap";
             this.btnNhap.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNhap_ItemClick);
             // 
@@ -562,10 +562,10 @@ namespace GUI
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 492);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 577);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(936, 24);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(978, 24);
             // 
             // barSubItem4
             // 
@@ -602,12 +602,15 @@ namespace GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(936, 516);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(978, 601);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("frmChinh.IconOptions.LargeImage")));
+            this.IsMdiContainer = true;
             this.Name = "frmChinh";
             this.Ribbon = this.ribbon;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "QUẢN LÝ KHO HÀNG";
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
