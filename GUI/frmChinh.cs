@@ -15,13 +15,13 @@ namespace GUI
         {
             InitializeComponent();
         }
-        private void btnNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            frmQuanLy f = new frmQuanLy();
-            if (ExistForm(f)) return;
-            f.MdiParent = this;
-            f.Show();
-        }
+        //private void btnNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        //{
+        //    frmQuanLy f = new frmQuanLy();
+        //    if (ExistForm(f)) return;
+        //    f.MdiParent = this;
+        //    f.Show();
+        //}
         public bool ExistForm(Form form)
         {
             foreach (var child in MdiChildren)
@@ -40,6 +40,22 @@ namespace GUI
                 ("Bạn có chắc muốn thoát không?", "Error", MessageBoxButtons.OKCancel);
             if (h == DialogResult.OK)
                 Application.Exit();
+        }
+
+        private void btnNhapMH_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmQuanLy f = new frmQuanLy();
+            if (ExistForm(f)) return;
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void btnNhapLH_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmMh f = new frmMh();
+            if (ExistForm(f)) return;
+            f.MdiParent = this;
+            f.Show();
         }
     }
 }

@@ -73,6 +73,9 @@ namespace GUI
             this.barButtonItem34 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem35 = new DevExpress.XtraBars.BarButtonItem();
             this.btnNhap = new DevExpress.XtraBars.BarButtonItem();
+            this.btnNhapp = new DevExpress.XtraBars.BarSubItem();
+            this.btnNhapMH = new DevExpress.XtraBars.BarButtonItem();
+            this.btnNhapLH = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -145,9 +148,12 @@ namespace GUI
             this.barButtonItem33,
             this.barButtonItem34,
             this.barButtonItem35,
-            this.btnNhap});
+            this.btnNhap,
+            this.btnNhapp,
+            this.btnNhapMH,
+            this.btnNhapLH});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 50;
+            this.ribbon.MaxItemId = 53;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage2,
@@ -440,7 +446,31 @@ namespace GUI
             this.btnNhap.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNhap.ImageOptions.Image")));
             this.btnNhap.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNhap.ImageOptions.LargeImage")));
             this.btnNhap.Name = "btnNhap";
-            this.btnNhap.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNhap_ItemClick);
+            // 
+            // btnNhapp
+            // 
+            this.btnNhapp.Caption = "Nhập Kho";
+            this.btnNhapp.Id = 50;
+            this.btnNhapp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNhapp.ImageOptions.Image")));
+            this.btnNhapp.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNhapp.ImageOptions.LargeImage")));
+            this.btnNhapp.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnNhapMH),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnNhapLH)});
+            this.btnNhapp.Name = "btnNhapp";
+            // 
+            // btnNhapMH
+            // 
+            this.btnNhapMH.Caption = "Nhập Mặt Hàng";
+            this.btnNhapMH.Id = 51;
+            this.btnNhapMH.Name = "btnNhapMH";
+            this.btnNhapMH.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNhapMH_ItemClick);
+            // 
+            // btnNhapLH
+            // 
+            this.btnNhapLH.Caption = "Nhập Loại Hàng";
+            this.btnNhapLH.Id = 52;
+            this.btnNhapLH.Name = "btnNhapLH";
+            this.btnNhapLH.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNhapLH_ItemClick);
             // 
             // ribbonPage2
             // 
@@ -454,7 +484,7 @@ namespace GUI
             // 
             // ribbonPageGroup12
             // 
-            this.ribbonPageGroup12.ItemLinks.Add(this.btnNhap);
+            this.ribbonPageGroup12.ItemLinks.Add(this.btnNhapp);
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
             // 
             // ribbonPageGroup2
@@ -687,6 +717,9 @@ namespace GUI
         private DevExpress.XtraBars.BarButtonItem barButtonItem35;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private DevExpress.XtraBars.BarButtonItem btnNhap;
+        private DevExpress.XtraBars.BarSubItem btnNhapp;
+        private DevExpress.XtraBars.BarButtonItem btnNhapMH;
+        private DevExpress.XtraBars.BarButtonItem btnNhapLH;
     }
 }
 

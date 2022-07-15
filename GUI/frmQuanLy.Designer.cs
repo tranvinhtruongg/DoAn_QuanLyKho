@@ -37,8 +37,6 @@ namespace GUI
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvMH = new System.Windows.Forms.DataGridView();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnEdit = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAdd = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -56,12 +54,29 @@ namespace GUI
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.vgtPageLH = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.btnDSLH = new DevExpress.XtraEditors.SimpleButton();
-            this.txbTenLH = new System.Windows.Forms.TextBox();
-            this.txbMaLH = new System.Windows.Forms.TextBox();
+            this.vgtPageEdit = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
+            this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
@@ -77,7 +92,8 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.navigationPane1.SuspendLayout();
             this.vgtPageMH.SuspendLayout();
-            this.vgtPageLH.SuspendLayout();
+            this.vgtPageEdit.SuspendLayout();
+            this.navigationPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -110,8 +126,6 @@ namespace GUI
             this.bindingNavigator1.CountItem = null;
             this.bindingNavigator1.DeleteItem = null;
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator2,
-            this.btnEdit,
             this.toolStripSeparator3,
             this.btnAdd,
             this.toolStripSeparator1,
@@ -129,20 +143,6 @@ namespace GUI
             this.bindingNavigator1.Size = new System.Drawing.Size(620, 25);
             this.bindingNavigator1.TabIndex = 10;
             this.bindingNavigator1.Text = "bindingNavigator1";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.RightToLeftAutoMirrorImage = true;
-            this.btnEdit.Size = new System.Drawing.Size(47, 22);
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // toolStripSeparator3
             // 
@@ -228,15 +228,15 @@ namespace GUI
             // navigationPane1
             // 
             this.navigationPane1.Controls.Add(this.vgtPageMH);
-            this.navigationPane1.Controls.Add(this.vgtPageLH);
-            this.navigationPane1.Location = new System.Drawing.Point(-3, 2);
+            this.navigationPane1.Controls.Add(this.vgtPageEdit);
+            this.navigationPane1.Location = new System.Drawing.Point(-1, 2);
             this.navigationPane1.Name = "navigationPane1";
             this.navigationPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.vgtPageMH,
-            this.vgtPageLH});
-            this.navigationPane1.RegularSize = new System.Drawing.Size(296, 316);
-            this.navigationPane1.SelectedPage = this.vgtPageLH;
-            this.navigationPane1.Size = new System.Drawing.Size(296, 316);
+            this.vgtPageEdit});
+            this.navigationPane1.RegularSize = new System.Drawing.Size(294, 316);
+            this.navigationPane1.SelectedPage = this.vgtPageMH;
+            this.navigationPane1.Size = new System.Drawing.Size(294, 316);
             this.navigationPane1.TabIndex = 13;
             this.navigationPane1.Text = "Nhập";
             // 
@@ -309,57 +309,204 @@ namespace GUI
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Mã MH";
             // 
-            // vgtPageLH
+            // vgtPageEdit
             // 
-            this.vgtPageLH.Caption = "Nhập loại hàng";
-            this.vgtPageLH.Controls.Add(this.btnDSLH);
-            this.vgtPageLH.Controls.Add(this.txbTenLH);
-            this.vgtPageLH.Controls.Add(this.txbMaLH);
-            this.vgtPageLH.Controls.Add(this.labelControl4);
-            this.vgtPageLH.Controls.Add(this.labelControl5);
-            this.vgtPageLH.Name = "vgtPageLH";
-            this.vgtPageLH.Size = new System.Drawing.Size(167, 243);
+            this.vgtPageEdit.Caption = "Cập Nhật";
+            this.vgtPageEdit.Controls.Add(this.simpleButton3);
+            this.vgtPageEdit.Controls.Add(this.textBox7);
+            this.vgtPageEdit.Controls.Add(this.textBox8);
+            this.vgtPageEdit.Controls.Add(this.textBox9);
+            this.vgtPageEdit.Controls.Add(this.labelControl17);
+            this.vgtPageEdit.Controls.Add(this.labelControl18);
+            this.vgtPageEdit.Controls.Add(this.labelControl19);
+            this.vgtPageEdit.Controls.Add(this.navigationPage1);
+            this.vgtPageEdit.Name = "vgtPageEdit";
+            this.vgtPageEdit.Size = new System.Drawing.Size(165, 243);
             // 
-            // btnDSLH
+            // simpleButton3
             // 
-            this.btnDSLH.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDSLH.Appearance.Options.UseFont = true;
-            this.btnDSLH.Location = new System.Drawing.Point(11, 172);
-            this.btnDSLH.Name = "btnDSLH";
-            this.btnDSLH.Size = new System.Drawing.Size(152, 49);
-            this.btnDSLH.TabIndex = 10;
-            this.btnDSLH.Text = "Hiển thị danh sách";
-            this.btnDSLH.Click += new System.EventHandler(this.btnDSLH_Click);
+            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton3.Appearance.Options.UseFont = true;
+            this.simpleButton3.Location = new System.Drawing.Point(7, 185);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(152, 49);
+            this.simpleButton3.TabIndex = 19;
+            this.simpleButton3.Text = "Hiển thị danh sách";
             // 
-            // txbTenLH
+            // textBox7
             // 
-            this.txbTenLH.Location = new System.Drawing.Point(12, 115);
-            this.txbTenLH.Name = "txbTenLH";
-            this.txbTenLH.Size = new System.Drawing.Size(100, 20);
-            this.txbTenLH.TabIndex = 9;
+            this.textBox7.Location = new System.Drawing.Point(7, 159);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.TabIndex = 18;
             // 
-            // txbMaLH
+            // textBox8
             // 
-            this.txbMaLH.Location = new System.Drawing.Point(13, 51);
-            this.txbMaLH.Name = "txbMaLH";
-            this.txbMaLH.Size = new System.Drawing.Size(100, 20);
-            this.txbMaLH.TabIndex = 8;
+            this.textBox8.Location = new System.Drawing.Point(7, 92);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 20);
+            this.textBox8.TabIndex = 17;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(8, 28);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 20);
+            this.textBox9.TabIndex = 16;
+            // 
+            // labelControl17
+            // 
+            this.labelControl17.Location = new System.Drawing.Point(7, 140);
+            this.labelControl17.Name = "labelControl17";
+            this.labelControl17.Size = new System.Drawing.Size(61, 13);
+            this.labelControl17.TabIndex = 15;
+            this.labelControl17.Text = "ID_LoaiHang";
+            // 
+            // labelControl18
+            // 
+            this.labelControl18.Location = new System.Drawing.Point(7, 73);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(36, 13);
+            this.labelControl18.TabIndex = 14;
+            this.labelControl18.Text = "Tên MH";
+            // 
+            // labelControl19
+            // 
+            this.labelControl19.Location = new System.Drawing.Point(11, 8);
+            this.labelControl19.Name = "labelControl19";
+            this.labelControl19.Size = new System.Drawing.Size(32, 13);
+            this.labelControl19.TabIndex = 13;
+            this.labelControl19.Text = "Mã MH";
+            // 
+            // navigationPage1
+            // 
+            this.navigationPage1.Caption = "Nhập Mặt Hàng";
+            this.navigationPage1.Controls.Add(this.simpleButton2);
+            this.navigationPage1.Controls.Add(this.textBox4);
+            this.navigationPage1.Controls.Add(this.textBox5);
+            this.navigationPage1.Controls.Add(this.textBox6);
+            this.navigationPage1.Controls.Add(this.labelControl4);
+            this.navigationPage1.Controls.Add(this.labelControl5);
+            this.navigationPage1.Controls.Add(this.labelControl16);
+            this.navigationPage1.Controls.Add(this.simpleButton1);
+            this.navigationPage1.Controls.Add(this.textBox1);
+            this.navigationPage1.Controls.Add(this.textBox2);
+            this.navigationPage1.Controls.Add(this.textBox3);
+            this.navigationPage1.Controls.Add(this.labelControl13);
+            this.navigationPage1.Controls.Add(this.labelControl14);
+            this.navigationPage1.Controls.Add(this.labelControl15);
+            this.navigationPage1.Name = "navigationPage1";
+            this.navigationPage1.Size = new System.Drawing.Size(167, 243);
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.Location = new System.Drawing.Point(7, 185);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(152, 49);
+            this.simpleButton2.TabIndex = 14;
+            this.simpleButton2.Text = "Hiển thị danh sách";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(7, 159);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 13;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(7, 92);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 12;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(8, 28);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 11;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(12, 96);
+            this.labelControl4.Location = new System.Drawing.Point(7, 140);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(33, 13);
-            this.labelControl4.TabIndex = 7;
-            this.labelControl4.Text = "Tên LH";
+            this.labelControl4.Size = new System.Drawing.Size(61, 13);
+            this.labelControl4.TabIndex = 10;
+            this.labelControl4.Text = "ID_LoaiHang";
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(15, 31);
+            this.labelControl5.Location = new System.Drawing.Point(7, 73);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(29, 13);
-            this.labelControl5.TabIndex = 6;
-            this.labelControl5.Text = "Mã LH";
+            this.labelControl5.Size = new System.Drawing.Size(36, 13);
+            this.labelControl5.TabIndex = 9;
+            this.labelControl5.Text = "Tên MH";
+            // 
+            // labelControl16
+            // 
+            this.labelControl16.Location = new System.Drawing.Point(11, 8);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(32, 13);
+            this.labelControl16.TabIndex = 8;
+            this.labelControl16.Text = "Mã MH";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.Location = new System.Drawing.Point(8, 191);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(152, 49);
+            this.simpleButton1.TabIndex = 7;
+            this.simpleButton1.Text = "Hiển thị danh sách";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(8, 165);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 6;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(8, 98);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 5;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(9, 34);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 4;
+            // 
+            // labelControl13
+            // 
+            this.labelControl13.Location = new System.Drawing.Point(8, 146);
+            this.labelControl13.Name = "labelControl13";
+            this.labelControl13.Size = new System.Drawing.Size(61, 13);
+            this.labelControl13.TabIndex = 2;
+            this.labelControl13.Text = "ID_LoaiHang";
+            // 
+            // labelControl14
+            // 
+            this.labelControl14.Location = new System.Drawing.Point(8, 79);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(36, 13);
+            this.labelControl14.TabIndex = 1;
+            this.labelControl14.Text = "Tên MH";
+            // 
+            // labelControl15
+            // 
+            this.labelControl15.Location = new System.Drawing.Point(12, 14);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(32, 13);
+            this.labelControl15.TabIndex = 0;
+            this.labelControl15.Text = "Mã MH";
             // 
             // labelControl6
             // 
@@ -460,8 +607,10 @@ namespace GUI
             this.navigationPane1.ResumeLayout(false);
             this.vgtPageMH.ResumeLayout(false);
             this.vgtPageMH.PerformLayout();
-            this.vgtPageLH.ResumeLayout(false);
-            this.vgtPageLH.PerformLayout();
+            this.vgtPageEdit.ResumeLayout(false);
+            this.vgtPageEdit.PerformLayout();
+            this.navigationPage1.ResumeLayout(false);
+            this.navigationPage1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -472,8 +621,6 @@ namespace GUI
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvMH;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton btnEdit;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton btnAdd;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -490,11 +637,7 @@ namespace GUI
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraBars.Navigation.NavigationPage vgtPageLH;
-        private System.Windows.Forms.TextBox txbTenLH;
-        private System.Windows.Forms.TextBox txbMaLH;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraBars.Navigation.NavigationPage vgtPageEdit;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl8;
@@ -503,6 +646,27 @@ namespace GUI
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.SimpleButton btnDSMH;
-        private DevExpress.XtraEditors.SimpleButton btnDSLH;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox9;
+        private DevExpress.XtraEditors.LabelControl labelControl17;
+        private DevExpress.XtraEditors.LabelControl labelControl18;
+        private DevExpress.XtraEditors.LabelControl labelControl19;
+        private DevExpress.XtraBars.Navigation.NavigationPage navigationPage1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl labelControl16;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private DevExpress.XtraEditors.LabelControl labelControl13;
+        private DevExpress.XtraEditors.LabelControl labelControl14;
+        private DevExpress.XtraEditors.LabelControl labelControl15;
     }
 }

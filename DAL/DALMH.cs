@@ -8,21 +8,20 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class DALQuanLy  :   DBConnect
+    public class DALMH :DBConnect
     {
-        public DataTable LayDSMatHang()
+        public DataTable LayDSLoaiHang()
         {
             DataTable dtMatHang = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM MATHANG", con);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM LOAIHANG", con);
             da.Fill(dtMatHang);
             return dtMatHang;
         }
-       
-        public void ThemMatHang(string ID, string TenMH, string ID_LoaiHang)
+        public void ThemLoaiHang(string ID, string TenMH)
         {
             try
             {
-                string sql = @"INSERT INTO MATHANG(ID,TenMH,ID_LoaiHang) VALUES (@ID, @TenMH, @ID_LoaiHang)";
+                string sql = @"INSERT INTO LOAIHANG(ID,TenMH) VALUES (@ID, @TenMH)";
                 con.Open();
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.CommandType = CommandType.Text;
@@ -30,17 +29,14 @@ namespace DAL
                 cmd.Parameters["@ID"].Value = ID;
                 cmd.Parameters.Add("@TenMH", SqlDbType.NVarChar);
                 cmd.Parameters["@TenMH"].Value = TenMH;
-                cmd.Parameters.Add("@ID_LoaiHang", SqlDbType.NVarChar);
-                cmd.Parameters["@ID_LoaiHang"].Value = ID_LoaiHang;
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
 
             }
-
         }
-        
     }
+    
 }
