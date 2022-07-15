@@ -21,14 +21,14 @@ namespace DAL
         {
             try
             {
-                string sql = @"INSERT INTO LOAIHANG(ID,TenMH) VALUES (@ID, @TenMH)";
+                string sql = @"INSERT INTO LOAIHANG(ID,TenLH) VALUES (@ID, @TenLH)";
                 con.Open();
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add("@ID", SqlDbType.NVarChar);
                 cmd.Parameters["@ID"].Value = ID;
-                cmd.Parameters.Add("@TenMH", SqlDbType.NVarChar);
-                cmd.Parameters["@TenMH"].Value = TenMH;
+                cmd.Parameters.Add("@TenLH", SqlDbType.NVarChar);
+                cmd.Parameters["@TenLH"].Value = TenMH;
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
