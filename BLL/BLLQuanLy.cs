@@ -15,9 +15,17 @@ namespace BLL
         {
             return dal.LayDSMatHang();
         }
+        public DataTable LayDSLoaiHang()
+        {
+            return dal.LayDSLoaiHang();
+        }
         public void ThemMatHang(string ID, string TenMH, string ID_LoaiHang)
         {
             dal.ThemMatHang(ID, TenMH, ID_LoaiHang);
+        }
+        public void ThemLoaiHang(string ID, string TenMH)
+        {
+            dal.ThemLoaiHang(ID, TenMH);
         }
     }
 }

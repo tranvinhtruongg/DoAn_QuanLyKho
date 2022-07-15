@@ -17,20 +17,26 @@ namespace GUI
         public frmQuanLy()
         {
             InitializeComponent();
-            loadMH();
+            
         }
         void loadMH()
         {
             DataTable dt = bll.LayDSMatHang();
             dgvMH.DataSource = dt;
         }
-
+        void loadLH()
+        {
+            DataTable dt = bll.LayDSLoaiHang();
+            dgvMH.DataSource = dt;
+        }
         private void btnCancel_Click(object sender, EventArgs e)
         {
             //Thiết lập lại các nút như ban đầu
             txbTenMH.Text = "";
             txbIDLH.Text = "";
             txbMaMH.Text = "";   
+            txbMaLH.Text= "";
+            txbTenLH.Text="";
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -40,19 +46,28 @@ namespace GUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            try
+            if(txbMaMH.Text=="" || txbTenMH.Text=="" || txbIDLH.Text=="")
+            {
+                MessageBox.Show("Thêm không thành công,vui lòng nhập dữ liệu!");
+            }
+            else if(txbMaLH.Text=="" || txbTenLH.Text=="")
+            {
+                MessageBox.Show("Thêm không thành công,vui lòng nhập dữ liệu!");
+            }    
+            else if(txbMaLH.Text!= null && txbTenLH.Text!=null)
+            {
+                bll.ThemLoaiHang(txbMaLH.Text, txbTenLH.Text);
+                MessageBox.Show("Thêm thành công");
+                loadLH();
+            }    
+            else 
             {
                 bll.ThemMatHang(txbMaMH.Text, txbTenMH.Text, txbIDLH.Text);
                 MessageBox.Show("Thêm thành công");
                 loadMH();
+            }
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Thêm không thành công");
-            }
         }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
 
@@ -65,5 +80,17 @@ namespace GUI
                 if (h == DialogResult.OK)
                 Application.Exit();
         }
+
+        private void btnDSMH_Click(object sender, EventArgs e)
+        {
+            loadMH();
+        }
+
+        private void btnDSLH_Click(object sender, EventArgs e)
+        {
+            loadLH();
+        }
+
+        
     }
 }

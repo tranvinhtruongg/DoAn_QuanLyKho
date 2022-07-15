@@ -34,5 +34,12 @@ namespace GUI
             }
             return false;
         }
+        private void frmChinh_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult h = MessageBox.Show
+                ("Bạn có chắc muốn thoát không?", "Error", MessageBoxButtons.OKCancel);
+            if (h == DialogResult.OK)
+                Application.Exit();
+        }
     }
 }
