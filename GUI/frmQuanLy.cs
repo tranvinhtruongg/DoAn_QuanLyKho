@@ -54,9 +54,28 @@ namespace GUI
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            if (dgvMH.SelectedRows.Count > 0)
+            {
+                // Lấy row hiện tại
+                DataGridViewRow row = dgvMH.SelectedRows[0];
+                string ID = row.Cells[0].Value.ToString();
+                // Xóa
+                if (bll.xoaMatHang(ID))
+                {
+                    MessageBox.Show("Xóa thành công");
+                    loadMH();
+                }
+                else
+                {
+                    MessageBox.Show("Xóa ko thành công");
+                    loadMH();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn thành viên muốn xóa");
+            }
         }
-
         private void frmQuanLy_FormClosing(object sender, FormClosingEventArgs e)
         {
                 DialogResult h = MessageBox.Show

@@ -18,6 +18,10 @@ namespace BLL
         {
             dal.ThemLoaiHang(ID, TenMH);
         }
+        public bool xoaLoaiHang(string masv)
+        {
+            return dal.xoaLoaiHang(masv);
+        }
     }
     
 }

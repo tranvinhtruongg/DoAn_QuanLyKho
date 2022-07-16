@@ -393,7 +393,7 @@ namespace GUI
             this.vgtPageEdit.Controls.Add(this.labelControl19);
             this.vgtPageEdit.Controls.Add(this.navigationPage3);
             this.vgtPageEdit.Name = "vgtPageEdit";
-            this.vgtPageEdit.Size = new System.Drawing.Size(294, 316);
+            this.vgtPageEdit.Size = new System.Drawing.Size(164, 243);
             // 
             // simpleButton3
             // 
@@ -639,6 +639,7 @@ namespace GUI
             this.btnDelete.RightToLeftAutoMirrorImage = true;
             this.btnDelete.Size = new System.Drawing.Size(60, 22);
             this.btnDelete.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // toolStripSeparator4
             // 

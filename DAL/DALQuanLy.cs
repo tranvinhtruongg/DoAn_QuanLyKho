@@ -41,6 +41,31 @@ namespace DAL
             }
 
         }
-        
+        public bool xoaMatHang(string mamh)
+        {
+            try
+            {
+                // Ket noi
+                con.Open();
+                // Query string - vì xóa chỉ cần ID nên chúng ta ko cần 1 DTO-ID là đủ
+                string SQL = string.Format("DELETE FROM [dbo].[MATHANG] WHERE ID='{0}'", mamh);
+                SqlCommand cmd = new SqlCommand(SQL, con);
+
+                // Query và kiểm tra
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            catch (Exception e)
+            {
+                Console.Write(e.ToString());
+            }
+            finally
+            {
+                // Dong ket noi
+                con.Close();
+            }
+            return false;
+        }
+
     }
 }
