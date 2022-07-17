@@ -18,5 +18,9 @@ namespace BLL
         {
             dal.ThemNhanVien(ID_NV, Ten_NV, Gioitinh, Email, DienThoai, NamSinh, DiaChi);
         }
+        public bool xoaNhanVien(string masv)
+        {
+            return dal.xoaNhanVien(masv);
+        }
     }
 }

@@ -73,7 +73,7 @@ namespace GUI
             // 
             this.navigationPane_NV.Controls.Add(this.navigationPage1);
             this.navigationPane_NV.Location = new System.Drawing.Point(0, 0);
-            this.navigationPane_NV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.navigationPane_NV.Margin = new System.Windows.Forms.Padding(2);
             this.navigationPane_NV.Name = "navigationPane_NV";
             this.navigationPane_NV.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.navigationPage1});
@@ -101,14 +101,14 @@ namespace GUI
             this.navigationPage1.Controls.Add(this.lblTenNV);
             this.navigationPage1.Controls.Add(this.lblID);
             this.navigationPage1.Controls.Add(this.txbID);
-            this.navigationPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.navigationPage1.Margin = new System.Windows.Forms.Padding(2);
             this.navigationPage1.Name = "navigationPage1";
             this.navigationPage1.Size = new System.Drawing.Size(225, 509);
             // 
             // btnHTNV
             // 
             this.btnHTNV.Location = new System.Drawing.Point(17, 260);
-            this.btnHTNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHTNV.Margin = new System.Windows.Forms.Padding(2);
             this.btnHTNV.Name = "btnHTNV";
             this.btnHTNV.Size = new System.Drawing.Size(181, 30);
             this.btnHTNV.TabIndex = 17;
@@ -120,7 +120,7 @@ namespace GUI
             // 
             this.dtpNS.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNS.Location = new System.Drawing.Point(89, 195);
-            this.dtpNS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpNS.Margin = new System.Windows.Forms.Padding(2);
             this.dtpNS.Name = "dtpNS";
             this.dtpNS.Size = new System.Drawing.Size(132, 20);
             this.dtpNS.TabIndex = 16;
@@ -129,7 +129,7 @@ namespace GUI
             // 
             this.cmbGT.FormattingEnabled = true;
             this.cmbGT.Location = new System.Drawing.Point(89, 82);
-            this.cmbGT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbGT.Margin = new System.Windows.Forms.Padding(2);
             this.cmbGT.Name = "cmbGT";
             this.cmbGT.Size = new System.Drawing.Size(132, 21);
             this.cmbGT.TabIndex = 15;
@@ -137,7 +137,7 @@ namespace GUI
             // txbDiachi
             // 
             this.txbDiachi.Location = new System.Drawing.Point(89, 233);
-            this.txbDiachi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbDiachi.Margin = new System.Windows.Forms.Padding(2);
             this.txbDiachi.Multiline = true;
             this.txbDiachi.Name = "txbDiachi";
             this.txbDiachi.Size = new System.Drawing.Size(132, 23);
@@ -146,7 +146,7 @@ namespace GUI
             // txbDienthoai
             // 
             this.txbDienthoai.Location = new System.Drawing.Point(89, 158);
-            this.txbDienthoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbDienthoai.Margin = new System.Windows.Forms.Padding(2);
             this.txbDienthoai.Multiline = true;
             this.txbDienthoai.Name = "txbDienthoai";
             this.txbDienthoai.Size = new System.Drawing.Size(132, 23);
@@ -155,7 +155,7 @@ namespace GUI
             // txbEmail
             // 
             this.txbEmail.Location = new System.Drawing.Point(89, 117);
-            this.txbEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txbEmail.Multiline = true;
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(132, 23);
@@ -164,7 +164,7 @@ namespace GUI
             // txbTenNV
             // 
             this.txbTenNV.Location = new System.Drawing.Point(89, 49);
-            this.txbTenNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbTenNV.Margin = new System.Windows.Forms.Padding(2);
             this.txbTenNV.Multiline = true;
             this.txbTenNV.Name = "txbTenNV";
             this.txbTenNV.Size = new System.Drawing.Size(132, 23);
@@ -243,7 +243,7 @@ namespace GUI
             // txbID
             // 
             this.txbID.Location = new System.Drawing.Point(89, 7);
-            this.txbID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbID.Margin = new System.Windows.Forms.Padding(2);
             this.txbID.Multiline = true;
             this.txbID.Name = "txbID";
             this.txbID.Size = new System.Drawing.Size(132, 23);
@@ -257,9 +257,9 @@ namespace GUI
             this.grbNV.Controls.Add(this.dtgvNV);
             this.grbNV.Controls.Add(this.bindingNavigator_NV);
             this.grbNV.Location = new System.Drawing.Point(376, 2);
-            this.grbNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbNV.Margin = new System.Windows.Forms.Padding(2);
             this.grbNV.Name = "grbNV";
-            this.grbNV.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbNV.Padding = new System.Windows.Forms.Padding(2);
             this.grbNV.Size = new System.Drawing.Size(537, 595);
             this.grbNV.TabIndex = 1;
             this.grbNV.TabStop = false;
@@ -270,7 +270,7 @@ namespace GUI
             this.dtgvNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvNV.Location = new System.Drawing.Point(4, 39);
-            this.dtgvNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtgvNV.Margin = new System.Windows.Forms.Padding(2);
             this.dtgvNV.Name = "dtgvNV";
             this.dtgvNV.RowHeadersWidth = 51;
             this.dtgvNV.RowTemplate.Height = 24;
@@ -343,6 +343,7 @@ namespace GUI
             this.btnDelete.RightToLeftAutoMirrorImage = true;
             this.btnDelete.Size = new System.Drawing.Size(64, 24);
             this.btnDelete.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // toolStripSeparator4
             // 
@@ -370,7 +371,7 @@ namespace GUI
             this.ClientSize = new System.Drawing.Size(914, 593);
             this.Controls.Add(this.grbNV);
             this.Controls.Add(this.navigationPane_NV);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmNhanVien";
             this.Text = "frmNhanVien";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

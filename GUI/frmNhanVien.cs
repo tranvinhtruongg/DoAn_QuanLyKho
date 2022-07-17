@@ -45,26 +45,42 @@ namespace GUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //if (txbID.Text == "" || txbTenNV.Text == "" || txbEmail.Text == "" || txbDienthoai.Text=="" || txbDiachi.Text=="" )
-            //{
-            //    MessageBox.Show("Thêm không thành công,vui lòng nhập dữ liệu!");
-            //}
-            //else if (txbID.Text == "" || txbTenNV.Text == ""|| txbEmail.Text=="" || txbDienthoai.Text=="")
-            //{
-            //    MessageBox.Show("Thêm không thành công,vui lòng nhập dữ liệu!");
-            //}
-            //else if (txbID.Text != null && txbTenNV.Text != null)
-            //{
-            //    bll.ThemNhanVien(txbID.Text, txbTenNV.Text, cmbGT.Items, txbEmail.Text, txbDienthoai.Text, dtpNS.Value, txbDiachi.Text);
-            //    MessageBox.Show("Thêm thành công");
-            //    loadDSNV();
-            //}
-            //else
-            //{
-            //    bll.ThemMatHang(txbMaMH.Text, txbTenMH.Text, txbIDLH.Text);
-            //    MessageBox.Show("Thêm thành công");
-            //    loadDSNV();
-            //}
+            if (txbID.Text == "" || txbTenNV.Text == "" || txbEmail.Text == "" || txbDienthoai.Text == "" || txbDiachi.Text == "")
+            {
+                MessageBox.Show("Thêm không thành công,vui lòng nhập dữ liệu!");
+            }
+            else
+            {
+                bll.ThemNhanVien(txbID.Text, txbTenNV.Text, cmbGT.Enabled, txbEmail.Text, txbDienthoai.Text, dtpNS.Value, txbDiachi.Text);
+                MessageBox.Show("Thêm thành công");
+                loadDSNV();
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dtgvNV.SelectedRows.Count > 0)
+            {
+                // Lấy row hiện tại
+                DataGridViewRow row = dtgvNV.SelectedRows[0];
+                string ID = row.Cells[0].Value.ToString();
+                // Xóa
+                if (bll.xoaNhanVien(ID))
+                {
+                    MessageBox.Show("Xóa thành công");
+                    loadDSNV();
+                }
+                else
+                {
+                    MessageBox.Show("Xóa ko thành công");
+                    loadDSNV();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn thành viên muốn xóa");
+            }
         }
     }
 }
+
