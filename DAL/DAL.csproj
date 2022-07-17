@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DALMH.cs" />
+    <Compile Include="DALNhanVien.cs" />
     <Compile Include="DALQuanLy.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

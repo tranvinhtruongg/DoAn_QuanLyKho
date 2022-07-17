@@ -289,9 +289,9 @@ namespace GUI
             // 
             this.labelControl3.Location = new System.Drawing.Point(8, 146);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(61, 13);
+            this.labelControl3.Size = new System.Drawing.Size(58, 13);
             this.labelControl3.TabIndex = 2;
-            this.labelControl3.Text = "ID_LoaiHang";
+            this.labelControl3.Text = "ID LoaiHang";
             // 
             // labelControl2
             // 

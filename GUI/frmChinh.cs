@@ -57,5 +57,13 @@ namespace GUI
             f.MdiParent = this;
             f.Show();
         }
+
+        private void btnNhanVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmNhanVien f = new frmNhanVien();
+            if (ExistForm(f)) return;
+            f.MdiParent = this;
+            f.Show();
+        }
     }
 }
