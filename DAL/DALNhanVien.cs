@@ -74,5 +74,31 @@ namespace DAL
             }
             return false;
         }
+        public bool suaNhanVien(string ID_NV, String Ten_NV, bool Gioitinh,string Email,string Dienthoai, DateTime NamSinh, string DiaChi)
+        {
+            try
+            {
+                //ket noi
+                con.Open();
+                //query string 
+                string SQL = string.Format(" update NHANVIEN set  Ten_NV = N'{0}', Gioitinh = '{1}',Email='{2}',Dienthoai='{3}',NamSinh='{4}',DiaChi='{5}' where ID_NV = '{6}'", Ten_NV, Gioitinh, Email, Dienthoai, NamSinh, DiaChi,ID_NV);
+                using (SqlCommand cmd = new SqlCommand(SQL, con))
+                {
+                    // Query và kiểm tra
+                    if (cmd.ExecuteNonQuery() > 0)
+                        return true;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.Write(e.ToString());
+            }
+            finally
+            {
+                // Dong ket noi
+                con.Close();
+            }
+            return false;
+        }
     }
 }

@@ -22,5 +22,9 @@ namespace BLL
         {
             return dal.xoaNhanVien(masv);
         }
+        public bool suaNhanVien( string ID_NV, String Ten_NV, bool Gioitinh, string Email, string Dienthoai, DateTime NamSinh, string DiaChi)
+        {
+            return dal.suaNhanVien(ID_NV, Ten_NV, Gioitinh, Email, Dienthoai, NamSinh, DiaChi);
+        }
     }
 }

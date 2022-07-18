@@ -81,6 +81,45 @@ namespace GUI
                 MessageBox.Show("Hãy chọn thành viên muốn xóa");
             }
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra nếu có chọn table rồi
+            if (dtgvNV.SelectedRows.Count > 0)
+            {
+                if (txbTenNV.Text != "" && cmbGT.Text != "" && txbEmail.Text != "" && txbDienthoai.Text != "" && dtpNS.Value!=null&& txbDiachi.Text!="")
+                {
+                    // Lấy row hiện tại
+                    DataGridViewRow row = dtgvNV.SelectedRows[0];
+                    string ID_NV = (row.Cells[0].Value.ToString());
+                    string Ten_NV = txbTenNV.Text;
+                    bool Gioitinh = cmbGT.Enabled;
+                    string Email = txbEmail.Text;
+                    string Dienthoai = txbDienthoai.Text;
+                    DateTime NamSinh = dtpNS.Value;
+                    string DiaChi = txbDiachi.Text;
+
+                    // Sửa
+                    if (bll.suaNhanVien( ID_NV, Ten_NV, Gioitinh, Email, Dienthoai, NamSinh, DiaChi))
+                    {
+                        MessageBox.Show("Sửa thành công");
+                        loadDSNV();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sửa ko thành công");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Xin hãy nhập đầy đủ");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn thành viên muốn sửa");
+            }
+        }
     }
 }
 
