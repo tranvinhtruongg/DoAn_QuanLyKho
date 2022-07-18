@@ -24,9 +24,6 @@ namespace BLL
         {
             return dal.xoaMatHang(masv);
         }
-        public bool suaMatHang(string ID,string TenMH,string ID_LoaiHang)
-        {
-            return dal.suaMatHang(ID,TenMH,ID_LoaiHang);
-        }
+
     }
 }
