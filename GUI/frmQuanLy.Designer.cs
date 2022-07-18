@@ -84,6 +84,7 @@ namespace GUI
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.btnEdit = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -132,7 +133,8 @@ namespace GUI
             this.btnDelete,
             this.toolStripSeparator4,
             this.btnCancel,
-            this.toolStripSeparator5});
+            this.toolStripSeparator5,
+            this.btnEdit});
             this.bindingNavigator1.Location = new System.Drawing.Point(3, 16);
             this.bindingNavigator1.MoveFirstItem = null;
             this.bindingNavigator1.MoveLastItem = null;
@@ -578,6 +580,15 @@ namespace GUI
             this.labelControl12.TabIndex = 19;
             this.labelControl12.Text = "LH6 : Đồ Điện Tử";
             // 
+            // btnEdit
+            // 
+            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.RightToLeftAutoMirrorImage = true;
+            this.btnEdit.Size = new System.Drawing.Size(47, 22);
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
+            // 
             // frmQuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -668,5 +679,6 @@ namespace GUI
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraEditors.LabelControl labelControl15;
+        private System.Windows.Forms.ToolStripButton btnEdit;
     }
 }

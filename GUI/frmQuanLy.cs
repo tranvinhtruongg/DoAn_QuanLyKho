@@ -33,11 +33,6 @@ namespace GUI
             txbMaMH.Text = "";   
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if(txbMaMH.Text=="" || txbTenMH.Text=="" || txbIDLH.Text=="")
@@ -89,6 +84,41 @@ namespace GUI
             loadMH();
         }
 
-        
+        private void btnEdit_Click_1(object sender, EventArgs e)
+        {
+            // Kiểm tra nếu có chọn table rồi
+            if (dgvMH.SelectedRows.Count > 0)
+            {
+                if ( txbTenMH.Text != "" && txbIDLH.Text != "")
+                {
+                    // Lấy row hiện tại
+                    DataGridViewRow row = dgvMH.SelectedRows[0];
+                    string ID = (row.Cells[0].Value.ToString());
+                    string TenMh = txbTenMH.Text;
+                    string ID_LoaiHang = txbIDLH.Text;
+
+                    // Sửa
+                    if (bll.suaMatHang(ID, TenMh, ID_LoaiHang))
+                    {
+                        MessageBox.Show("Sửa thành công");
+                        loadMH();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sửa ko thành công");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Xin hãy nhập đầy đủ");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn thành viên muốn sửa");
+            }
+        }
+
     }
 }
+

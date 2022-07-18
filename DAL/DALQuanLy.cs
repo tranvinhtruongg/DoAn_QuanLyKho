@@ -66,6 +66,32 @@ namespace DAL
             }
             return false;
         }
+        public bool suaMatHang(string ID, String TenMH, string ID_LoaiHang)
+        {
+            try
+            {
+                //ket noi
+                con.Open();
+                //query string 
+                string SQL = string.Format(" update MATHANG set  TenMH = N'{0}', ID_LoaiHang = '{1}' where ID = '{2}'", TenMH, ID_LoaiHang, ID);
+                using (SqlCommand cmd = new SqlCommand(SQL, con))
+                {
+                    // Query và kiểm tra
+                    if (cmd.ExecuteNonQuery() > 0)
+                        return true;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.Write(e.ToString());
+            }
+            finally
+            {
+                // Dong ket noi
+                con.Close();
+            }
+            return false;
+        }
 
     }
 }
