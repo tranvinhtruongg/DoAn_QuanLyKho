@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmQuanLy : Form
+    public partial class frmMatHang : Form
     {
-        BLLQuanLy bll =new BLLQuanLy();
-        public frmQuanLy()
+        BLLMatHang bll =new BLLMatHang();
+        public frmMatHang()
         {
             InitializeComponent();
             

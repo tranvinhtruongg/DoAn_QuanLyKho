@@ -1,7 +1,7 @@
 ﻿
 namespace GUI
 {
-    partial class frmQuanLy
+    partial class frmMatHang
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace GUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanLy));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMatHang));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -52,7 +52,7 @@ namespace GUI
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+
             this.vgtPageMH = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -276,11 +276,7 @@ namespace GUI
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(164, 532);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(396, 246);
-            this.reportViewer1.TabIndex = 20;
+
             // 
             // vgtPageMH
             // 
@@ -379,7 +375,6 @@ namespace GUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(954, 589);
-            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.labelControl12);
             this.Controls.Add(this.labelControl11);
             this.Controls.Add(this.labelControl10);
@@ -430,7 +425,7 @@ namespace GUI
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.LabelControl labelControl12;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+
         private System.Windows.Forms.ToolStripButton Edit;
         private DevExpress.XtraBars.Navigation.NavigationPage vgtPageMH;
         private DevExpress.XtraEditors.LabelControl labelControl1;

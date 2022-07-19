@@ -12,10 +12,10 @@ using BLL;
 namespace GUI
 {
     
-    public partial class frmMh : Form
+    public partial class frmLoaiHang : Form
     {
-        BLLMH bll = new BLLMH();
-        public frmMh()
+        BLLLoaiHang bll = new BLLLoaiHang();
+        public frmLoaiHang()
         {
             InitializeComponent();
         }

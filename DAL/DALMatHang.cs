@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class DALQuanLy  :   DBConnect
+    public class DALMatHang  :   DBConnect
     {
         public DataTable LayDSMatHang()
         {

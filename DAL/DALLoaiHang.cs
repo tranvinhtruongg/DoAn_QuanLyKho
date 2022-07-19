@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class DALMH :DBConnect
+    public class DALLoaiHang :DBConnect
     {
         public DataTable LayDSLoaiHang()
         {
