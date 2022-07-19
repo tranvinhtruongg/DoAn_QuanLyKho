@@ -83,11 +83,11 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMh.cs">
+    <Compile Include="frmLoaiHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMh.Designer.cs">
-      <DependentUpon>frmMh.cs</DependentUpon>
+    <Compile Include="frmLoaiHang.Designer.cs">
+      <DependentUpon>frmLoaiHang.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNhanVien.cs">
       <SubType>Form</SubType>
@@ -95,11 +95,11 @@
     <Compile Include="frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQuanLy.cs">
+    <Compile Include="frmMatHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQuanLy.Designer.cs">
-      <DependentUpon>frmQuanLy.cs</DependentUpon>
+    <Compile Include="frmMatHang.Designer.cs">
+      <DependentUpon>frmMatHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -110,14 +110,14 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMh.resx">
-      <DependentUpon>frmMh.cs</DependentUpon>
+    <EmbeddedResource Include="frmLoaiHang.resx">
+      <DependentUpon>frmLoaiHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQuanLy.resx">
-      <DependentUpon>frmQuanLy.cs</DependentUpon>
+    <EmbeddedResource Include="frmMatHang.resx">
+      <DependentUpon>frmMatHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

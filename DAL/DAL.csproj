@@ -41,9 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DALMH.cs" />
+    <Compile Include="DALLoaiHang.cs" />
     <Compile Include="DALNhanVien.cs" />
-    <Compile Include="DALQuanLy.cs" />
+    <Compile Include="DALMatHang.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

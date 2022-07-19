@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class BLLQuanLy
+    public class BLLMatHang
     {
-        DALQuanLy dal = new DALQuanLy();
+        DALMatHang dal = new DALMatHang();
         public DataTable LayDSMatHang()
         {
             return dal.LayDSMatHang();

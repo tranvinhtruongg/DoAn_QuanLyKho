@@ -44,7 +44,7 @@ namespace GUI
 
         private void btnNhapMH_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmQuanLy f = new frmQuanLy();
+            frmMatHang f = new frmMatHang();
             if (ExistForm(f)) return;
             f.MdiParent = this;
             f.Show();
@@ -52,7 +52,7 @@ namespace GUI
 
         private void btnNhapLH_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmMh f = new frmMh();
+            frmLoaiHang f = new frmLoaiHang();
             if (ExistForm(f)) return;
             f.MdiParent = this;
             f.Show();

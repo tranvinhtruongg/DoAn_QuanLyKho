@@ -41,9 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLLMH.cs" />
+    <Compile Include="BLLLoaiHang.cs" />
     <Compile Include="BLLNhanVien.cs" />
-    <Compile Include="BLLQuanLy.cs" />
+    <Compile Include="BLLMatHang.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
