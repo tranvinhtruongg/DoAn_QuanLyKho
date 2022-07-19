@@ -92,7 +92,7 @@ namespace GUI
         private void frmQuanLy_Load(object sender, EventArgs e)
         {
 
-            this.reportViewer1.RefreshReport();
+            
         }
 
         private void Edit_Click(object sender, EventArgs e)

@@ -41,19 +41,19 @@ namespace GUI
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            txbMaLH.Text = "";
+            txbIDLoaiHang.Text = "";
             txbTenLH.Text = "";
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txbMaLH.Text == "" || txbTenLH.Text == "" )
+            if (txbTenLH.Text == "" &&  txbIDLoaiHang.Text == "" )
             {
                 MessageBox.Show("Thêm không thành công,vui lòng nhập dữ liệu!");
             }
             else
             {
-                bll.ThemLoaiHang(txbMaLH.Text, txbTenLH.Text);
+                bll.ThemLoaiHang(txbTenLH.Text, txbIDLoaiHang.Text);
                 MessageBox.Show("Thêm thành công");
                 loadLH();
             }
@@ -82,6 +82,49 @@ namespace GUI
             {
                 MessageBox.Show("Hãy chọn thành viên muốn xóa");
             }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (dgvMH.SelectedRows.Count > 0)
+            {
+                if (txbTenLH.Text != "" && txbIDLoaiHang.Text != "" )
+                {
+                    // Lấy row hiện tại
+                    DataGridViewRow row = dgvMH.SelectedRows[0];
+
+                    string ID = (row.Cells[0].Value.ToString());
+                    string TenLoaiHang = txbTenLH.Text;
+                    string ID_KHO = txbIDLoaiHang.Text;
+                    
+
+                    // Sửa
+                    if (bll.suaLoaiHang(ID, TenLoaiHang, ID_KHO))
+                    {
+                        MessageBox.Show("Sửa thành công");
+                        loadLH();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sửa ko thành công");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Xin hãy nhập đầy đủ");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn thành viên muốn sửa");
+            }
+        }
+
+        private void dgvMH_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dgvMH.SelectedRows[0];
+            txbTenLH.Text= row.Cells[1].Value.ToString();
+            txbIDLoaiHang.Text= row.Cells[2].Value.ToString();
         }
     }
 }

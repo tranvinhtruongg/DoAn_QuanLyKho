@@ -14,13 +14,17 @@ namespace BLL
         {
             return dal.LayDSLoaiHang();
         }
-        public void ThemLoaiHang(string ID, string TenMH)
+        public void ThemLoaiHang(string TenLoaiHang, string ID_KHO)
         {
-            dal.ThemLoaiHang(ID, TenMH);
+            dal.ThemLoaiHang(TenLoaiHang, ID_KHO);
         }
         public bool xoaLoaiHang(string masv)
         {
             return dal.xoaLoaiHang(masv);
+        }
+        public bool suaLoaiHang(string ID, string TenLoaiHang, string ID_KHO)
+        {
+            return dal.suaLoaiHang(ID, TenLoaiHang, ID_KHO);
         }
     }
     

@@ -46,8 +46,6 @@ namespace GUI
             this.lblGT = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblTenNV = new System.Windows.Forms.Label();
-            this.lblID = new System.Windows.Forms.Label();
-            this.txbID = new System.Windows.Forms.TextBox();
             this.grbNV = new System.Windows.Forms.GroupBox();
             this.dtgvNV = new System.Windows.Forms.DataGridView();
             this.bindingNavigator_NV = new System.Windows.Forms.BindingNavigator(this.components);
@@ -99,8 +97,6 @@ namespace GUI
             this.navigationPage1.Controls.Add(this.lblGT);
             this.navigationPage1.Controls.Add(this.lblEmail);
             this.navigationPage1.Controls.Add(this.lblTenNV);
-            this.navigationPage1.Controls.Add(this.lblID);
-            this.navigationPage1.Controls.Add(this.txbID);
             this.navigationPage1.Margin = new System.Windows.Forms.Padding(2);
             this.navigationPage1.Name = "navigationPage1";
             this.navigationPage1.Size = new System.Drawing.Size(225, 509);
@@ -119,7 +115,7 @@ namespace GUI
             // dtpNS
             // 
             this.dtpNS.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNS.Location = new System.Drawing.Point(89, 195);
+            this.dtpNS.Location = new System.Drawing.Point(88, 170);
             this.dtpNS.Margin = new System.Windows.Forms.Padding(2);
             this.dtpNS.Name = "dtpNS";
             this.dtpNS.Size = new System.Drawing.Size(132, 20);
@@ -128,7 +124,7 @@ namespace GUI
             // cmbGT
             // 
             this.cmbGT.FormattingEnabled = true;
-            this.cmbGT.Location = new System.Drawing.Point(89, 82);
+            this.cmbGT.Location = new System.Drawing.Point(88, 57);
             this.cmbGT.Margin = new System.Windows.Forms.Padding(2);
             this.cmbGT.Name = "cmbGT";
             this.cmbGT.Size = new System.Drawing.Size(132, 21);
@@ -136,7 +132,7 @@ namespace GUI
             // 
             // txbDiachi
             // 
-            this.txbDiachi.Location = new System.Drawing.Point(89, 233);
+            this.txbDiachi.Location = new System.Drawing.Point(88, 208);
             this.txbDiachi.Margin = new System.Windows.Forms.Padding(2);
             this.txbDiachi.Multiline = true;
             this.txbDiachi.Name = "txbDiachi";
@@ -145,7 +141,7 @@ namespace GUI
             // 
             // txbDienthoai
             // 
-            this.txbDienthoai.Location = new System.Drawing.Point(89, 158);
+            this.txbDienthoai.Location = new System.Drawing.Point(88, 133);
             this.txbDienthoai.Margin = new System.Windows.Forms.Padding(2);
             this.txbDienthoai.Multiline = true;
             this.txbDienthoai.Name = "txbDienthoai";
@@ -154,7 +150,7 @@ namespace GUI
             // 
             // txbEmail
             // 
-            this.txbEmail.Location = new System.Drawing.Point(89, 117);
+            this.txbEmail.Location = new System.Drawing.Point(88, 92);
             this.txbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txbEmail.Multiline = true;
             this.txbEmail.Name = "txbEmail";
@@ -163,7 +159,7 @@ namespace GUI
             // 
             // txbTenNV
             // 
-            this.txbTenNV.Location = new System.Drawing.Point(89, 49);
+            this.txbTenNV.Location = new System.Drawing.Point(88, 24);
             this.txbTenNV.Margin = new System.Windows.Forms.Padding(2);
             this.txbTenNV.Multiline = true;
             this.txbTenNV.Name = "txbTenNV";
@@ -173,7 +169,7 @@ namespace GUI
             // lblDC
             // 
             this.lblDC.AutoSize = true;
-            this.lblDC.Location = new System.Drawing.Point(15, 236);
+            this.lblDC.Location = new System.Drawing.Point(14, 211);
             this.lblDC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDC.Name = "lblDC";
             this.lblDC.Size = new System.Drawing.Size(40, 13);
@@ -183,7 +179,7 @@ namespace GUI
             // lblNS
             // 
             this.lblNS.AutoSize = true;
-            this.lblNS.Location = new System.Drawing.Point(15, 200);
+            this.lblNS.Location = new System.Drawing.Point(14, 175);
             this.lblNS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNS.Name = "lblNS";
             this.lblNS.Size = new System.Drawing.Size(51, 13);
@@ -193,7 +189,7 @@ namespace GUI
             // lblDT
             // 
             this.lblDT.AutoSize = true;
-            this.lblDT.Location = new System.Drawing.Point(15, 161);
+            this.lblDT.Location = new System.Drawing.Point(14, 136);
             this.lblDT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDT.Name = "lblDT";
             this.lblDT.Size = new System.Drawing.Size(55, 13);
@@ -203,7 +199,7 @@ namespace GUI
             // lblGT
             // 
             this.lblGT.AutoSize = true;
-            this.lblGT.Location = new System.Drawing.Point(15, 84);
+            this.lblGT.Location = new System.Drawing.Point(14, 59);
             this.lblGT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGT.Name = "lblGT";
             this.lblGT.Size = new System.Drawing.Size(47, 13);
@@ -213,7 +209,7 @@ namespace GUI
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(15, 119);
+            this.lblEmail.Location = new System.Drawing.Point(14, 94);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(32, 13);
@@ -223,31 +219,12 @@ namespace GUI
             // lblTenNV
             // 
             this.lblTenNV.AutoSize = true;
-            this.lblTenNV.Location = new System.Drawing.Point(15, 51);
+            this.lblTenNV.Location = new System.Drawing.Point(14, 26);
             this.lblTenNV.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTenNV.Name = "lblTenNV";
             this.lblTenNV.Size = new System.Drawing.Size(76, 13);
             this.lblTenNV.TabIndex = 3;
             this.lblTenNV.Text = "Tên nhân viên";
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(15, 10);
-            this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(72, 13);
-            this.lblID.TabIndex = 2;
-            this.lblID.Text = "Mã nhân viên";
-            // 
-            // txbID
-            // 
-            this.txbID.Location = new System.Drawing.Point(89, 7);
-            this.txbID.Margin = new System.Windows.Forms.Padding(2);
-            this.txbID.Multiline = true;
-            this.txbID.Name = "txbID";
-            this.txbID.Size = new System.Drawing.Size(132, 23);
-            this.txbID.TabIndex = 1;
             // 
             // grbNV
             // 
@@ -276,6 +253,7 @@ namespace GUI
             this.dtgvNV.RowTemplate.Height = 24;
             this.dtgvNV.Size = new System.Drawing.Size(529, 539);
             this.dtgvNV.TabIndex = 12;
+            this.dtgvNV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvNV_CellClick);
             // 
             // bindingNavigator_NV
             // 
@@ -396,9 +374,7 @@ namespace GUI
 
         private DevExpress.XtraBars.Navigation.NavigationPane navigationPane_NV;
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPage1;
-        private System.Windows.Forms.TextBox txbID;
         private System.Windows.Forms.Label lblTenNV;
-        private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.TextBox txbDiachi;
         private System.Windows.Forms.TextBox txbDienthoai;
         private System.Windows.Forms.TextBox txbEmail;

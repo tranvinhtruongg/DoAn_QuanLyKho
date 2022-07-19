@@ -17,18 +17,18 @@ namespace DAL
             da.Fill(dtMatHang);
             return dtMatHang;
         }
-        public void ThemLoaiHang(string ID, string TenMH)
+        public void ThemLoaiHang(string TenLoaiHang, string ID_KHO)
         {
             try
             {
-                string sql = @"INSERT INTO LOAIHANG(ID,TenLH) VALUES (@ID, @TenLH)";
+                string sql = @"INSERT INTO LOAIHANG(TenLoaiHang,ID_KHO) VALUES (@TenLoaiHang, @ID_KHO)";
                 con.Open();
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add("@ID", SqlDbType.NVarChar);
-                cmd.Parameters["@ID"].Value = ID;
-                cmd.Parameters.Add("@TenLH", SqlDbType.NVarChar);
-                cmd.Parameters["@TenLH"].Value = TenMH;
+                cmd.Parameters.Add("@TenLoaiHang", SqlDbType.NVarChar);
+                cmd.Parameters["@TenLoaiHang"].Value = TenLoaiHang;
+                cmd.Parameters.Add("@ID_KHO", SqlDbType.NVarChar);
+                cmd.Parameters["@ID_KHO"].Value = ID_KHO;
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
@@ -50,6 +50,32 @@ namespace DAL
                 // Query và kiểm tra
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
+            }
+            catch (Exception e)
+            {
+                Console.Write(e.ToString());
+            }
+            finally
+            {
+                // Dong ket noi
+                con.Close();
+            }
+            return false;
+        }
+        public bool suaLoaiHang(string ID, String TenLoaiHang, string ID_KHO)
+        {
+            try
+            {
+                //ket noi
+                con.Open();
+                //query string 
+                string SQL = string.Format(" update LOAIHANG set  TenLoaiHang = N'{0}', ID_KHO = '{1}' where ID = '{2}'", TenLoaiHang, ID_KHO,ID);
+                using (SqlCommand cmd = new SqlCommand(SQL, con))
+                {
+                    // Query và kiểm tra
+                    if (cmd.ExecuteNonQuery() > 0)
+                        return true;
+                }
             }
             catch (Exception e)
             {
