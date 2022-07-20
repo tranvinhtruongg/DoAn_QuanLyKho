@@ -14,7 +14,7 @@ namespace GUI
     
     public partial class frmLH : Form
     {
-        BLLMH bll = new BLLMH();
+        BLLLoaiHang bll = new BLLLoaiHang();
         public frmLH()
         {
             InitializeComponent();

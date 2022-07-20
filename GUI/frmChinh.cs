@@ -44,10 +44,10 @@ namespace GUI
 
         private void btnNhapMH_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmMatHang f = new frmMatHang();
-            if (ExistForm(f)) return;
-            f.MdiParent = this;
-            f.Show();
+            //frmMatHang f = new frmMatHang();
+            //if (ExistForm(f)) return;
+            //f.MdiParent = this;
+            //f.Show();
         }
 
         private void btnNhapLH_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
