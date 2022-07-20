@@ -17,16 +17,15 @@ namespace DAL
             da.Fill(dtDSNhanVien);
             return dtDSNhanVien;
         }
-        public void ThemNhanVien(string ID_NV, string Ten_NV, bool Gioitinh, string Email, string DienThoai, DateTime NamSinh, string DiaChi)
+        public void ThemNhanVien(string Ten_NV, bool Gioitinh, string Email, string DienThoai, DateTime NamSinh, string DiaChi)
         {
             try
             {
-                string sql = @"INSERT INTO NHANVIEN(ID_NV,Ten_NV,Gioitinh,Email,Dienthoai,NamSinh, DiaChi) VALUES (@ID_NV, @Ten_NV, @Gioitinh,@Email,@Dienthoai,@NamSinh,@Diachi)";
+                string sql = @"INSERT INTO NHANVIEN(Ten_NV,Gioitinh,Email,Dienthoai,NamSinh, DiaChi) VALUES (@Ten_NV, @Gioitinh,@Email,@Dienthoai,@NamSinh,@Diachi)";
                 con.Open();
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add("@ID_NV", SqlDbType.NVarChar);
-                cmd.Parameters["@ID_NV"].Value = ID_NV;
+                
                 cmd.Parameters.Add("@Ten_NV", SqlDbType.NVarChar);
                 cmd.Parameters["@Ten_NV"].Value = Ten_NV;
                 cmd.Parameters.Add("@Gioitinh", SqlDbType.Bit);
@@ -49,19 +48,45 @@ namespace DAL
             }
 
         }
-        public bool xoaNhanVien(string mamh)
+        public bool xoaNhanVien(string ID)
         {
             try
             {
                 // Ket noi
                 con.Open();
                 // Query string - vì xóa chỉ cần ID nên chúng ta ko cần 1 DTO-ID là đủ
-                string SQL = string.Format("DELETE FROM [dbo].[NHANVIEN] WHERE ID_NV='{0}'", mamh);
+                string SQL = string.Format("DELETE FROM [dbo].[NHANVIEN] WHERE ID_NV='{0}'", ID);
                 SqlCommand cmd = new SqlCommand(SQL, con);
 
                 // Query và kiểm tra
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
+            }
+            catch (Exception e)
+            {
+                Console.Write(e.ToString());
+            }
+            finally
+            {
+                // Dong ket noi
+                con.Close();
+            }
+            return false;
+        }
+        public bool suaNhanVien(string ID, String Ten_NV, bool Gioitinh, string Email, string Dienthoai, DateTime NamSinh, string DiaChi)
+        {
+            try
+            {
+                //ket noi
+                con.Open();
+                //query string 
+                string SQL = string.Format(" update NHANVIEN set  Ten_NV = N'{0}', Gioitinh = '{1}',Email='{2}',Dienthoai='{3}',NamSinh='{4}',DiaChi='{5}' where ID = '{6}'", Ten_NV, Gioitinh, Email, Dienthoai, NamSinh, DiaChi, ID);
+                using (SqlCommand cmd = new SqlCommand(SQL, con))
+                {
+                    // Query và kiểm tra
+                    if (cmd.ExecuteNonQuery() > 0)
+                        return true;
+                }
             }
             catch (Exception e)
             {

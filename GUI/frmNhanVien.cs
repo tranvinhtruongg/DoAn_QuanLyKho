@@ -45,13 +45,13 @@ namespace GUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txbID.Text == "" || txbTenNV.Text == "" || txbEmail.Text == "" || txbDienthoai.Text == "" || txbDiachi.Text == "")
+            if (txbTenNV.Text == "" || txbEmail.Text == "" || txbDienthoai.Text == "" || txbDiachi.Text == "")
             {
                 MessageBox.Show("Thêm không thành công,vui lòng nhập dữ liệu!");
             }
             else
             {
-                bll.ThemNhanVien(txbID.Text, txbTenNV.Text, cmbGT.Enabled, txbEmail.Text, txbDienthoai.Text, dtpNS.Value, txbDiachi.Text);
+                bll.ThemNhanVien(txbTenNV.Text, cmbGT.Enabled, txbEmail.Text, txbDienthoai.Text, dtpNS.Value, txbDiachi.Text);
                 MessageBox.Show("Thêm thành công");
                 loadDSNV();
             }
@@ -81,6 +81,55 @@ namespace GUI
                 MessageBox.Show("Hãy chọn thành viên muốn xóa");
             }
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra nếu có chọn table rồi
+            if (dtgvNV.SelectedRows.Count > 0)
+            {
+                if (txbTenNV.Text != "" && cmbGT.SelectedIndex != null && txbEmail.Text != "" && txbDienthoai.Text != "" && dtpNS.Value != null && txbDiachi.Text != "")
+                {
+                    // Lấy row hiện tại
+                    DataGridViewRow row = dtgvNV.SelectedRows[0];
+                    string ID = (row.Cells[0].Value.ToString());
+                    string Ten_NV = txbTenNV.Text;
+                    bool Gioitinh = cmbGT.Enabled;
+                    string Email = txbEmail.Text;
+                    string Dienthoai = txbDienthoai.Text;
+                    DateTime NamSinh = dtpNS.Value;
+                    string DiaChi = txbDiachi.Text;
+
+                    // Sửa
+                    if (bll.suaNhanVien(ID, Ten_NV, Gioitinh, Email, Dienthoai, NamSinh, DiaChi))
+                    {
+                        MessageBox.Show("Sửa thành công");
+                        loadDSNV();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sửa ko thành công");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Xin hãy nhập đầy đủ");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn thành viên muốn sửa");
+            }
+        }
+
+        private void dtgvNV_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dtgvNV.SelectedRows[0];
+            txbTenNV.Text = row.Cells[1].Value.ToString();
+            txbEmail.Text = row.Cells[3].Value.ToString();
+            txbDienthoai.Text = row.Cells[4].Value.ToString();
+            txbDiachi.Text = row.Cells[6].Value.ToString();
+        }        
     }
 }
+
 

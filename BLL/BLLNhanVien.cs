@@ -14,13 +14,17 @@ namespace BLL
         {
             return dal.LayDSNhanVien();
         }
-        public void ThemNhanVien(string ID_NV, string Ten_NV, bool Gioitinh, string Email, string DienThoai, DateTime NamSinh, string DiaChi)
+        public void ThemNhanVien(string Ten_NV, bool Gioitinh, string Email, string DienThoai, DateTime NamSinh, string DiaChi)
         {
-            dal.ThemNhanVien(ID_NV, Ten_NV, Gioitinh, Email, DienThoai, NamSinh, DiaChi);
+            dal.ThemNhanVien(Ten_NV, Gioitinh, Email, DienThoai, NamSinh, DiaChi);
         }
         public bool xoaNhanVien(string masv)
         {
             return dal.xoaNhanVien(masv);
+        }
+        public bool suaNhanVien(string ID, String Ten_NV, bool Gioitinh, string Email, string Dienthoai, DateTime NamSinh, string DiaChi)
+        {
+            return dal.suaNhanVien(ID, Ten_NV, Gioitinh, Email, Dienthoai, NamSinh, DiaChi);
         }
     }
 }

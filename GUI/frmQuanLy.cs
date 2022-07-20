@@ -13,40 +13,34 @@ namespace GUI
 {
     public partial class frmQuanLy : Form
     {
-        BLLQuanLy bll =new BLLQuanLy();
+        BLLQuanLy bll = new BLLQuanLy();
         public frmQuanLy()
         {
             InitializeComponent();
-            
+
         }
         void loadMH()
         {
             DataTable dt = bll.LayDSMatHang();
             dgvMH.DataSource = dt;
         }
-        
+
         private void btnCancel_Click(object sender, EventArgs e)
         {
             //Thiết lập lại các nút như ban đầu
-            txbTenMH.Text = "";
+            txbViTri.Text = "";
             txbIDLH.Text = "";
-            txbMaMH.Text = "";   
+            txbTenMH.Text = "";
         }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if(txbMaMH.Text=="" || txbTenMH.Text=="" || txbIDLH.Text=="")
+            if (txbTenMH.Text == "" || txbViTri.Text == "" || txbIDLH.Text == "")
             {
                 MessageBox.Show("Thêm không thành công,vui lòng nhập dữ liệu!");
-            }  
-            else 
+            }
+            else
             {
-                bll.ThemMatHang(txbMaMH.Text, txbTenMH.Text, txbIDLH.Text);
+                bll.ThemMatHang(txbTenMH.Text, txbViTri.Text, txbIDLH.Text);
                 MessageBox.Show("Thêm thành công");
                 loadMH();
             }
@@ -73,14 +67,14 @@ namespace GUI
             }
             else
             {
-                MessageBox.Show("Hãy chọn thành viên muốn xóa");
+                MessageBox.Show("Hãy chọn mặt hàng muốn xóa");
             }
         }
         private void frmQuanLy_FormClosing(object sender, FormClosingEventArgs e)
         {
-                DialogResult h = MessageBox.Show
-                ("Bạn có chắc muốn thoát không?", "Error", MessageBoxButtons.OKCancel);
-                if (h == DialogResult.OK)
+            DialogResult h = MessageBox.Show
+            ("Bạn có chắc muốn thoát không?", "Error", MessageBoxButtons.OKCancel);
+            if (h == DialogResult.OK)
                 Application.Exit();
         }
 
@@ -89,6 +83,48 @@ namespace GUI
             loadMH();
         }
 
-        
+        private void Edit_Click(object sender, EventArgs e)
+        {
+            if (dgvMH.SelectedRows.Count > 0)
+            {
+                if (txbTenMH.Text != "" && txbViTri.Text != "" && txbIDLH.Text != "")
+                {
+                    // Lấy row hiện tại
+                    DataGridViewRow row = dgvMH.SelectedRows[0];
+
+                    string ID = (row.Cells[0].Value.ToString());
+                    string TenMatHang = txbTenMH.Text;
+                    string ViTri = txbViTri.Text;
+                    string ID_LH = txbIDLH.Text;
+
+                    // Sửa
+                    if (bll.suaMatHang(ID,TenMatHang, ViTri, ID_LH))
+                    {
+                        MessageBox.Show("Sửa thành công");
+                        loadMH();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sửa ko thành công");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Xin hãy nhập đầy đủ");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn mặt hàng muốn sửa");
+            }
+        }
+
+        private void dgvMH_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dgvMH.SelectedRows[0];
+            txbTenMH.Text = row.Cells[1].Value.ToString();
+            txbViTri.Text = row.Cells[2].Value.ToString();
+            txbIDLH.Text = row.Cells[4].Value.ToString();
+        }
     }
 }

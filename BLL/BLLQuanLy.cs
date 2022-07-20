@@ -20,10 +20,13 @@ namespace BLL
         {
             dal.ThemMatHang(ID, TenMH, ID_LoaiHang);
         }
-        public bool xoaMatHang(string masv)
+        public bool xoaMatHang(string mamh)
         {
-            return dal.xoaMatHang(masv);
+            return dal.xoaMatHang(mamh);
         }
-
+        public bool suaMatHang(string ID, string TenMatHang, string ViTri, string ID_LH)
+        {
+            return dal.suaMatHang(ID, TenMatHang, ViTri, ID_LH);
+        }
     }
 }

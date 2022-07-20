@@ -52,7 +52,7 @@ namespace GUI
 
         private void btnNhapLH_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmMh f = new frmMh();
+            frmLH f = new frmLH();
             if (ExistForm(f)) return;
             f.MdiParent = this;
             f.Show();

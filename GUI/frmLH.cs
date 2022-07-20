@@ -12,10 +12,10 @@ using BLL;
 namespace GUI
 {
     
-    public partial class frmMh : Form
+    public partial class frmLH : Form
     {
         BLLMH bll = new BLLMH();
-        public frmMh()
+        public frmLH()
         {
             InitializeComponent();
         }
@@ -41,19 +41,19 @@ namespace GUI
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            txbMaLH.Text = "";
+            txbKho.Text = "";
             txbTenLH.Text = "";
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txbMaLH.Text == "" || txbTenLH.Text == "" )
+            if (txbTenLH.Text == "" || txbKho.Text == "" )
             {
                 MessageBox.Show("Thêm không thành công,vui lòng nhập dữ liệu!");
             }
             else
             {
-                bll.ThemLoaiHang(txbMaLH.Text, txbTenLH.Text);
+                bll.ThemLoaiHang(txbKho.Text, txbTenLH.Text);
                 MessageBox.Show("Thêm thành công");
                 loadLH();
             }
@@ -80,8 +80,49 @@ namespace GUI
             }
             else
             {
-                MessageBox.Show("Hãy chọn thành viên muốn xóa");
+                MessageBox.Show("Hãy chọn loại hàng muốn xóa");
             }
+        }
+
+        private void Edit_Click(object sender, EventArgs e)
+        {
+            if (dgvMH.SelectedRows.Count > 0)
+            {
+                if (txbTenLH.Text != "" && txbKho.Text != "")
+                {
+                    // Lấy row hiện tại
+                    DataGridViewRow row = dgvMH.SelectedRows[0];
+
+                    string ID = (row.Cells[0].Value.ToString());
+                    string TenLoaiHang = txbTenLH.Text;
+                    string ID_KHO = txbKho.Text;
+                    // Sửa
+                    if (bll.suaLoaiHang(ID, TenLoaiHang, ID_KHO))
+                    {
+                        MessageBox.Show("Sửa thành công");
+                        loadLH();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sửa ko thành công");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Xin hãy nhập đầy đủ");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn loại hàng muốn sửa");
+            }
+        }
+
+        private void dgvMH_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dgvMH.SelectedRows[0];
+            txbTenLH.Text = row.Cells[1].Value.ToString();
+            txbKho.Text = row.Cells[2].Value.ToString();
         }
     }
 }

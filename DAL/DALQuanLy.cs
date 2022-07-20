@@ -17,21 +17,22 @@ namespace DAL
             da.Fill(dtMatHang);
             return dtMatHang;
         }
-       
-        public void ThemMatHang(string ID, string TenMH, string ID_LoaiHang)
+
+        public void ThemMatHang(string TenMatHang, string ViTri, string ID_LH)
         {
             try
             {
-                string sql = @"INSERT INTO MATHANG(ID,TenMH,ID_LoaiHang) VALUES (@ID, @TenMH, @ID_LoaiHang)";
+                string sql = @"INSERT INTO MATHANG(TenMatHang,ViTri,ID_LH) VALUES ( N'@TenMH',N'@ViTri', @ID_LoaiHang)";
                 con.Open();
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add("@ID", SqlDbType.NVarChar);
-                cmd.Parameters["@ID"].Value = ID;
+
                 cmd.Parameters.Add("@TenMH", SqlDbType.NVarChar);
-                cmd.Parameters["@TenMH"].Value = TenMH;
+                cmd.Parameters["@TenMH"].Value = TenMatHang;
+                cmd.Parameters.Add("@ViTri", SqlDbType.NVarChar);
+                cmd.Parameters["@ViTri"].Value = ViTri;
                 cmd.Parameters.Add("@ID_LoaiHang", SqlDbType.NVarChar);
-                cmd.Parameters["@ID_LoaiHang"].Value = ID_LoaiHang;
+                cmd.Parameters["@ID_LoaiHang"].Value = ID_LH;
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
@@ -66,6 +67,31 @@ namespace DAL
             }
             return false;
         }
-
+        public bool suaMatHang(string ID, String TenMatHang, string ViTri, string ID_LH)
+        {
+            try
+            {
+                //ket noi
+                con.Open();
+                //query string 
+                string SQL = string.Format(" update MATHANG set  TenMatHang = N'{0}', ViTri = '{1}',ID_LH='{2}' where ID = '{3}'", TenMatHang, ViTri, ID_LH, ID);
+                using (SqlCommand cmd = new SqlCommand(SQL, con))
+                {
+                    // Query và kiểm tra
+                    if (cmd.ExecuteNonQuery() > 0)
+                        return true;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.Write(e.ToString());
+            }
+            finally
+            {
+                // Dong ket noi
+                con.Close();
+            }
+            return false;
+        }
     }
 }
