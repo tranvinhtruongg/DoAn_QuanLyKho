@@ -8,43 +8,48 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class DALMH :DBConnect
+    public class DALMatHang  :   DBConnect
     {
-        public DataTable LayDSLoaiHang()
+        public DataTable LayDSMatHang()
         {
             DataTable dtMatHang = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM LOAIHANG", con);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM MATHANG", con);
             da.Fill(dtMatHang);
             return dtMatHang;
         }
-        public void ThemLoaiHang(string TenLoaiHang, string ID_KHO)
+
+        public void ThemMatHang(string TenMatHang, string ViTri, string ID_LH)
         {
             try
             {
-                string sql = @"INSERT INTO LOAIHANG(TenLoaiHang,ID_KHO) VALUES (@TenLoaiHang, @ID_KHO)";
+                string sql = @"INSERT INTO MATHANG(TenMatHang,ViTri,ID_LH) VALUES ( N'@TenMH',N'@ViTri', @ID_LoaiHang)";
                 con.Open();
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add("@TenLoaiHang", SqlDbType.NVarChar);
-                cmd.Parameters["@TenLoaiHang"].Value = TenLoaiHang;
-                cmd.Parameters.Add("@ID_KHO", SqlDbType.NVarChar);
-                cmd.Parameters["@ID_KHO"].Value = ID_KHO;
+
+                cmd.Parameters.Add("@TenMH", SqlDbType.NVarChar);
+                cmd.Parameters["@TenMH"].Value = TenMatHang;
+                cmd.Parameters.Add("@ViTri", SqlDbType.NVarChar);
+                cmd.Parameters["@ViTri"].Value = ViTri;
+                cmd.Parameters.Add("@ID_LoaiHang", SqlDbType.NVarChar);
+                cmd.Parameters["@ID_LoaiHang"].Value = ID_LH;
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
 
             }
+
         }
-        public bool xoaLoaiHang(string malh)
+        public bool xoaMatHang(string mamh)
         {
             try
             {
                 // Ket noi
                 con.Open();
                 // Query string - vì xóa chỉ cần ID nên chúng ta ko cần 1 DTO-ID là đủ
-                string SQL = string.Format("DELETE FROM [dbo].[LOAIHANG] WHERE ID='{0}'", malh);
+                string SQL = string.Format("DELETE FROM [dbo].[MATHANG] WHERE ID='{0}'", mamh);
                 SqlCommand cmd = new SqlCommand(SQL, con);
 
                 // Query và kiểm tra
@@ -62,14 +67,14 @@ namespace DAL
             }
             return false;
         }
-        public bool suaLoaiHang(string ID, String TenLoaiHang, string ID_KHO)
+        public bool suaMatHang(string ID, String TenMatHang, string ViTri, string ID_LH)
         {
             try
             {
                 //ket noi
                 con.Open();
                 //query string 
-                string SQL = string.Format(" update LOAIHANG set  TenLoaiHang = N'{0}', ID_KHO = '{1}' where ID = '{2}'", TenLoaiHang, ID_KHO, ID);
+                string SQL = string.Format(" update MATHANG set  TenMatHang = N'{0}', ViTri = '{1}',ID_LH='{2}' where ID = '{3}'", TenMatHang, ViTri, ID_LH, ID);
                 using (SqlCommand cmd = new SqlCommand(SQL, con))
                 {
                     // Query và kiểm tra

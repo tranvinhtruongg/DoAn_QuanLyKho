@@ -1,7 +1,7 @@
 ﻿
 namespace GUI
 {
-    partial class frmQuanLy
+    partial class frmMatHang
     {
         /// <summary>
         /// Required designer variable.
@@ -67,6 +67,7 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.vgtPageMH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.navigationPane1.SuspendLayout();
             this.vgtPageMH.SuspendLayout();
@@ -406,6 +407,7 @@ namespace GUI
             this.Text = "frmQuanLy";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmQuanLy_FormClosing);
+            this.Load += new System.EventHandler(this.frmQuanLy_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMH)).EndInit();
@@ -413,8 +415,6 @@ namespace GUI
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).EndInit();
-            this.navigationPane1.ResumeLayout(false);
             this.vgtPageMH.ResumeLayout(false);
             this.vgtPageMH.PerformLayout();
             this.ResumeLayout(false);
@@ -450,6 +450,11 @@ namespace GUI
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.LabelControl labelControl12;
+
+        private System.Windows.Forms.ToolStripButton Edit;
+        private DevExpress.XtraBars.Navigation.NavigationPage vgtPageMH;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private System.Windows.Forms.TextBox txbViTri;
         private DevExpress.XtraEditors.SimpleButton btnDSMH;
         private System.Windows.Forms.ToolStripButton Edit;
     }

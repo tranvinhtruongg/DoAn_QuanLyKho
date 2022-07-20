@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmQuanLy : Form
+    public partial class frmMatHang : Form
     {
         BLLQuanLy bll = new BLLQuanLy();
         public frmQuanLy()
@@ -81,6 +81,12 @@ namespace GUI
         private void btnDSMH_Click(object sender, EventArgs e)
         {
             loadMH();
+        }
+
+        private void frmQuanLy_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
         }
 
         private void Edit_Click(object sender, EventArgs e)

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 using DAL;
 namespace BLL
 {
-    public class BLLMH
+    public class BLLLoaiHang
     {
-        DALMH dal = new DALMH();
+        DALLoaiHang dal = new DALLoaiHang();
         public DataTable LayDSLoaiHang()
         {
             return dal.LayDSLoaiHang();
