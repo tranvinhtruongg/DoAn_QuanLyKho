@@ -37,14 +37,14 @@ namespace DAL
 
             }
         }
-        public bool xoaLoaiHang(string malh)
+        public bool xoaLoaiHang(string ID)
         {
             try
             {
                 // Ket noi
                 con.Open();
                 // Query string - vì xóa chỉ cần ID nên chúng ta ko cần 1 DTO-ID là đủ
-                string SQL = string.Format("DELETE FROM [dbo].[LOAIHANG] WHERE ID='{0}'", malh);
+                string SQL = string.Format("DELETE FROM [dbo].[LOAIHANG] WHERE ID='{0}'", ID);
                 SqlCommand cmd = new SqlCommand(SQL, con);
 
                 // Query và kiểm tra
@@ -62,32 +62,7 @@ namespace DAL
             }
             return false;
         }
-        public bool suaLoaiHang(string ID, String TenLoaiHang, string ID_KHO)
-        {
-            try
-            {
-                //ket noi
-                con.Open();
-                //query string 
-                string SQL = string.Format(" update LOAIHANG set  TenLoaiHang = N'{0}', ID_KHO = '{1}' where ID = '{2}'", TenLoaiHang, ID_KHO,ID);
-                using (SqlCommand cmd = new SqlCommand(SQL, con))
-                {
-                    // Query và kiểm tra
-                    if (cmd.ExecuteNonQuery() > 0)
-                        return true;
-                }
-            }
-            catch (Exception e)
-            {
-                Console.Write(e.ToString());
-            }
-            finally
-            {
-                // Dong ket noi
-                con.Close();
-            }
-            return false;
-        }
+       
         public bool suaLoaiHang(string ID, String TenLoaiHang, string ID_KHO)
         {
             try

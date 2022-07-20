@@ -53,7 +53,7 @@ namespace GUI
             }
             else
             {
-                bll.ThemLoaiHang(txbKho.Text, txbTenLH.Text);
+                bll.ThemLoaiHang(txbTenLH.Text,txbKho.Text);
                 MessageBox.Show("Thêm thành công");
                 loadLH();
             }
@@ -118,7 +118,8 @@ namespace GUI
             }
         }
 
-        private void dgvMH_Click(object sender, EventArgs e)
+
+        private void dgvMH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow row = dgvMH.SelectedRows[0];
             txbTenLH.Text = row.Cells[1].Value.ToString();
