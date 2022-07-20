@@ -22,11 +22,10 @@ namespace DAL
         {
             try
             {
-                string sql = @"INSERT INTO MATHANG(TenMatHang,ViTri,ID_LH) VALUES ( N'@TenMH',N'@ViTri', @ID_LoaiHang)";
+                string sql = @"INSERT INTO MATHANG(TenMatHang,ViTri,ID_LH) VALUES ( @TenMH,@ViTri, @ID_LoaiHang)";
                 con.Open();
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.CommandType = CommandType.Text;
-
                 cmd.Parameters.Add("@TenMH", SqlDbType.NVarChar);
                 cmd.Parameters["@TenMH"].Value = TenMatHang;
                 cmd.Parameters.Add("@ViTri", SqlDbType.NVarChar);
