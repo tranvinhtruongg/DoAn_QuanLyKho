@@ -17,8 +17,8 @@ namespace DAL
             da.Fill(dtMatHang);
             return dtMatHang;
         }
-       
-        public void ThemMatHang( string TenMatHang,string ViTri, string ID_LH)
+
+        public void ThemMatHang(string TenMatHang, string ViTri, string ID_LH)
         {
             try
             {
@@ -26,7 +26,7 @@ namespace DAL
                 con.Open();
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.CommandType = CommandType.Text;
-               
+
                 cmd.Parameters.Add("@TenMH", SqlDbType.NVarChar);
                 cmd.Parameters["@TenMH"].Value = TenMatHang;
                 cmd.Parameters.Add("@ViTri", SqlDbType.NVarChar);

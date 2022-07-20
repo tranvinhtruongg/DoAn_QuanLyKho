@@ -70,14 +70,14 @@ namespace GUI
             // navigationPane_NV
             // 
             this.navigationPane_NV.Controls.Add(this.navigationPage1);
-            this.navigationPane_NV.Location = new System.Drawing.Point(0, 0);
-            this.navigationPane_NV.Margin = new System.Windows.Forms.Padding(2);
+            this.navigationPane_NV.Location = new System.Drawing.Point(3, 2);
+            this.navigationPane_NV.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.navigationPane_NV.Name = "navigationPane_NV";
             this.navigationPane_NV.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.navigationPage1});
-            this.navigationPane_NV.RegularSize = new System.Drawing.Size(380, 582);
+            this.navigationPane_NV.RegularSize = new System.Drawing.Size(503, 521);
             this.navigationPane_NV.SelectedPage = this.navigationPage1;
-            this.navigationPane_NV.Size = new System.Drawing.Size(380, 582);
+            this.navigationPane_NV.Size = new System.Drawing.Size(503, 521);
             this.navigationPane_NV.TabIndex = 0;
             this.navigationPane_NV.Text = "Nhân Viên";
             // 
@@ -99,14 +99,14 @@ namespace GUI
             this.navigationPage1.Controls.Add(this.lblTenNV);
             this.navigationPage1.Margin = new System.Windows.Forms.Padding(2);
             this.navigationPage1.Name = "navigationPage1";
-            this.navigationPage1.Size = new System.Drawing.Size(225, 509);
+            this.navigationPage1.Size = new System.Drawing.Size(318, 431);
             // 
             // btnHTNV
             // 
-            this.btnHTNV.Location = new System.Drawing.Point(17, 260);
-            this.btnHTNV.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHTNV.Location = new System.Drawing.Point(6, 370);
+            this.btnHTNV.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.btnHTNV.Name = "btnHTNV";
-            this.btnHTNV.Size = new System.Drawing.Size(181, 30);
+            this.btnHTNV.Size = new System.Drawing.Size(334, 59);
             this.btnHTNV.TabIndex = 17;
             this.btnHTNV.Text = "Hiển thị danh sách nhân viên";
             this.btnHTNV.UseVisualStyleBackColor = true;
@@ -118,7 +118,7 @@ namespace GUI
             this.dtpNS.Location = new System.Drawing.Point(88, 170);
             this.dtpNS.Margin = new System.Windows.Forms.Padding(2);
             this.dtpNS.Name = "dtpNS";
-            this.dtpNS.Size = new System.Drawing.Size(132, 20);
+            this.dtpNS.Size = new System.Drawing.Size(175, 22);
             this.dtpNS.TabIndex = 16;
             // 
             // cmbGT
@@ -127,7 +127,7 @@ namespace GUI
             this.cmbGT.Location = new System.Drawing.Point(88, 57);
             this.cmbGT.Margin = new System.Windows.Forms.Padding(2);
             this.cmbGT.Name = "cmbGT";
-            this.cmbGT.Size = new System.Drawing.Size(132, 21);
+            this.cmbGT.Size = new System.Drawing.Size(155, 24);
             this.cmbGT.TabIndex = 15;
             // 
             // txbDiachi
@@ -136,7 +136,7 @@ namespace GUI
             this.txbDiachi.Margin = new System.Windows.Forms.Padding(2);
             this.txbDiachi.Multiline = true;
             this.txbDiachi.Name = "txbDiachi";
-            this.txbDiachi.Size = new System.Drawing.Size(132, 23);
+            this.txbDiachi.Size = new System.Drawing.Size(175, 27);
             this.txbDiachi.TabIndex = 14;
             // 
             // txbDienthoai
@@ -145,7 +145,7 @@ namespace GUI
             this.txbDienthoai.Margin = new System.Windows.Forms.Padding(2);
             this.txbDienthoai.Multiline = true;
             this.txbDienthoai.Name = "txbDienthoai";
-            this.txbDienthoai.Size = new System.Drawing.Size(132, 23);
+            this.txbDienthoai.Size = new System.Drawing.Size(175, 25);
             this.txbDienthoai.TabIndex = 12;
             // 
             // txbEmail
@@ -154,7 +154,7 @@ namespace GUI
             this.txbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txbEmail.Multiline = true;
             this.txbEmail.Name = "txbEmail";
-            this.txbEmail.Size = new System.Drawing.Size(132, 23);
+            this.txbEmail.Size = new System.Drawing.Size(158, 28);
             this.txbEmail.TabIndex = 11;
             // 
             // txbTenNV
@@ -163,7 +163,7 @@ namespace GUI
             this.txbTenNV.Margin = new System.Windows.Forms.Padding(2);
             this.txbTenNV.Multiline = true;
             this.txbTenNV.Name = "txbTenNV";
-            this.txbTenNV.Size = new System.Drawing.Size(132, 23);
+            this.txbTenNV.Size = new System.Drawing.Size(155, 31);
             this.txbTenNV.TabIndex = 9;
             // 
             // lblDC
@@ -172,7 +172,7 @@ namespace GUI
             this.lblDC.Location = new System.Drawing.Point(14, 211);
             this.lblDC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDC.Name = "lblDC";
-            this.lblDC.Size = new System.Drawing.Size(40, 13);
+            this.lblDC.Size = new System.Drawing.Size(51, 17);
             this.lblDC.TabIndex = 8;
             this.lblDC.Text = "Địa chỉ";
             // 
@@ -182,7 +182,7 @@ namespace GUI
             this.lblNS.Location = new System.Drawing.Point(14, 175);
             this.lblNS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNS.Name = "lblNS";
-            this.lblNS.Size = new System.Drawing.Size(51, 13);
+            this.lblNS.Size = new System.Drawing.Size(67, 17);
             this.lblNS.TabIndex = 7;
             this.lblNS.Text = "Năm sinh";
             // 
@@ -192,7 +192,7 @@ namespace GUI
             this.lblDT.Location = new System.Drawing.Point(14, 136);
             this.lblDT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDT.Name = "lblDT";
-            this.lblDT.Size = new System.Drawing.Size(55, 13);
+            this.lblDT.Size = new System.Drawing.Size(72, 17);
             this.lblDT.TabIndex = 6;
             this.lblDT.Text = "Điện thoại";
             // 
@@ -202,7 +202,7 @@ namespace GUI
             this.lblGT.Location = new System.Drawing.Point(14, 59);
             this.lblGT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGT.Name = "lblGT";
-            this.lblGT.Size = new System.Drawing.Size(47, 13);
+            this.lblGT.Size = new System.Drawing.Size(60, 17);
             this.lblGT.TabIndex = 5;
             this.lblGT.Text = "Giới tính";
             // 
@@ -212,7 +212,7 @@ namespace GUI
             this.lblEmail.Location = new System.Drawing.Point(14, 94);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(32, 13);
+            this.lblEmail.Size = new System.Drawing.Size(42, 17);
             this.lblEmail.TabIndex = 4;
             this.lblEmail.Text = "Email";
             // 
@@ -222,7 +222,7 @@ namespace GUI
             this.lblTenNV.Location = new System.Drawing.Point(14, 26);
             this.lblTenNV.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTenNV.Name = "lblTenNV";
-            this.lblTenNV.Size = new System.Drawing.Size(76, 13);
+            this.lblTenNV.Size = new System.Drawing.Size(99, 17);
             this.lblTenNV.TabIndex = 3;
             this.lblTenNV.Text = "Tên nhân viên";
             // 
@@ -233,11 +233,11 @@ namespace GUI
             this.grbNV.AutoSize = true;
             this.grbNV.Controls.Add(this.dtgvNV);
             this.grbNV.Controls.Add(this.bindingNavigator_NV);
-            this.grbNV.Location = new System.Drawing.Point(376, 2);
-            this.grbNV.Margin = new System.Windows.Forms.Padding(2);
+            this.grbNV.Location = new System.Drawing.Point(515, 2);
+            this.grbNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbNV.Name = "grbNV";
-            this.grbNV.Padding = new System.Windows.Forms.Padding(2);
-            this.grbNV.Size = new System.Drawing.Size(537, 595);
+            this.grbNV.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbNV.Size = new System.Drawing.Size(766, 528);
             this.grbNV.TabIndex = 1;
             this.grbNV.TabStop = false;
             this.grbNV.Text = "Quản lý nhân viên";
@@ -246,12 +246,13 @@ namespace GUI
             // 
             this.dtgvNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvNV.Location = new System.Drawing.Point(4, 39);
-            this.dtgvNV.Margin = new System.Windows.Forms.Padding(2);
+            this.dtgvNV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvNV.Location = new System.Drawing.Point(3, 44);
+            this.dtgvNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgvNV.Name = "dtgvNV";
             this.dtgvNV.RowHeadersWidth = 51;
             this.dtgvNV.RowTemplate.Height = 24;
-            this.dtgvNV.Size = new System.Drawing.Size(529, 539);
+            this.dtgvNV.Size = new System.Drawing.Size(760, 482);
             this.dtgvNV.TabIndex = 12;
             this.dtgvNV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvNV_CellClick);
             // 
@@ -271,14 +272,14 @@ namespace GUI
             this.toolStripSeparator4,
             this.btnCancel,
             this.toolStripSeparator5});
-            this.bindingNavigator_NV.Location = new System.Drawing.Point(2, 15);
+            this.bindingNavigator_NV.Location = new System.Drawing.Point(3, 17);
             this.bindingNavigator_NV.MoveFirstItem = null;
             this.bindingNavigator_NV.MoveLastItem = null;
             this.bindingNavigator_NV.MoveNextItem = null;
             this.bindingNavigator_NV.MovePreviousItem = null;
             this.bindingNavigator_NV.Name = "bindingNavigator_NV";
             this.bindingNavigator_NV.PositionItem = null;
-            this.bindingNavigator_NV.Size = new System.Drawing.Size(533, 27);
+            this.bindingNavigator_NV.Size = new System.Drawing.Size(760, 27);
             this.bindingNavigator_NV.TabIndex = 11;
             this.bindingNavigator_NV.Text = "bindingNavigator1";
             // 
@@ -292,7 +293,7 @@ namespace GUI
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.RightToLeftAutoMirrorImage = true;
-            this.btnEdit.Size = new System.Drawing.Size(51, 24);
+            this.btnEdit.Size = new System.Drawing.Size(59, 24);
             this.btnEdit.Text = "Edit";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -306,7 +307,7 @@ namespace GUI
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.RightToLeftAutoMirrorImage = true;
-            this.btnAdd.Size = new System.Drawing.Size(53, 24);
+            this.btnAdd.Size = new System.Drawing.Size(61, 24);
             this.btnAdd.Text = "Add";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -320,7 +321,7 @@ namespace GUI
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.RightToLeftAutoMirrorImage = true;
-            this.btnDelete.Size = new System.Drawing.Size(64, 24);
+            this.btnDelete.Size = new System.Drawing.Size(77, 24);
             this.btnDelete.Text = "Delete";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -334,7 +335,7 @@ namespace GUI
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.RightToLeftAutoMirrorImage = true;
-            this.btnCancel.Size = new System.Drawing.Size(67, 24);
+            this.btnCancel.Size = new System.Drawing.Size(77, 24);
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -345,12 +346,12 @@ namespace GUI
             // 
             // frmNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 593);
+            this.ClientSize = new System.Drawing.Size(1284, 547);
             this.Controls.Add(this.grbNV);
             this.Controls.Add(this.navigationPane_NV);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmNhanVien";
             this.Text = "frmNhanVien";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

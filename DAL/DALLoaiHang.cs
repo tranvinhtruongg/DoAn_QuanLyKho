@@ -88,6 +88,31 @@ namespace DAL
             }
             return false;
         }
+        public bool suaLoaiHang(string ID, String TenLoaiHang, string ID_KHO)
+        {
+            try
+            {
+                //ket noi
+                con.Open();
+                //query string 
+                string SQL = string.Format(" update LOAIHANG set  TenLoaiHang = N'{0}', ID_KHO = '{1}' where ID = '{2}'", TenLoaiHang, ID_KHO, ID);
+                using (SqlCommand cmd = new SqlCommand(SQL, con))
+                {
+                    // Query và kiểm tra
+                    if (cmd.ExecuteNonQuery() > 0)
+                        return true;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.Write(e.ToString());
+            }
+            finally
+            {
+                // Dong ket noi
+                con.Close();
+            }
+            return false;
+        }
     }
-    
 }

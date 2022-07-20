@@ -128,6 +128,16 @@ namespace GUI
             txbDienthoai.Text = row.Cells[4].Value.ToString();
             txbDiachi.Text = row.Cells[6].Value.ToString();
         }
+
+        private void dtgvNV_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dtgvNV.SelectedRows[0];
+            txbTenNV.Text = row.Cells[1].Value.ToString();
+            txbEmail.Text = row.Cells[3].Value.ToString();
+            txbDienthoai.Text = row.Cells[4].Value.ToString();
+            txbDiachi.Text = row.Cells[6].Value.ToString();
+        }        
     }
 }
+
 
