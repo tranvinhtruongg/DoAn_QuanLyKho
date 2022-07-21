@@ -22,14 +22,14 @@ namespace GUI
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            if(cmbLoaiHang.SelectedIndex == null && txbMatHang.Text=="")
+            if (cmbLoaiHang.SelectedIndex == null && txbMatHang.Text == "")
             {
                 MessageBox.Show("Chưa chọn thông tin,vui lòng nhập thông tin!");
             }
             else
             {
-                bll.timKiem(cmbLoaiHang.Text, txbMatHang.Text);
-                MessageBox.Show("Thêm thành công!");
+                MessageBox.Show("Tim kiếm thành công!");
+                dgvTimKem.DataSource = bll.timKiem(cmbLoaiHang.Text, txbMatHang.Text);
             }
         }
         void loadtimkiem()

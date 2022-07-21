@@ -11,13 +11,14 @@ namespace BLL
     public class BLLTimKiem
     {
         DALTimKiem dal = new DALTimKiem();
-        public void timKiem(string tenLoaiHang,string tenMatHang)
+        public DataTable timKiem(string tenLoaiHang,string tenMatHang)
         {
-            dal.timKiem(tenLoaiHang, tenMatHang);
+            return dal.timKiem(tenLoaiHang, tenMatHang);
         }
         public DataTable layDataLH()
         {
             return dal.layDataLH();
         }
+        
     }
 }

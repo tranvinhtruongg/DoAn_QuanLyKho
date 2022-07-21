@@ -17,26 +17,30 @@ namespace DAL
             da.Fill(dtDSTimKiem);
             return dtDSTimKiem;
         }
-        public void timKiem(string TenLoaiHang, string TenMatHang)
+        public DataTable timKiem(string TenLoaiHang, string TenMatHang)
         {
+            DataTable dtDSTimKiem = new DataTable();
             try
             {
                 con.Open();
-                DataTable dtdstimkiem = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter("select * from mathang", con);
-
-                string sql = string.Format(" select MATHANG.ID,TenMatHang,ViTri,SoLuongTon,ID_LH " +
+                string sql = string.Format("select DISTINCT MATHANG.ID,TenMatHang,ViTri,SoLuongTon,ID_LH " +
                                             "from LOAIHANG,MATHANG " +
-                                            "where LOAIHANG.TenLoaiHang=N'Đồng hồ' and MATHANG.ID_LH=LOAIHANG.ID ", TenLoaiHang, TenMatHang);
+                                            "where LOAIHANG.TenLoaiHang like N'%{0}%' and MATHANG.TenMatHang like  N'%{1}%' " +
+                                            "and MATHANG.ID_LH = LOAIHANG.ID ", TenLoaiHang, TenMatHang);
+
+                SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                da.Fill(dtDSTimKiem);
+                return dtDSTimKiem;
             }
             catch (Exception e)
             {
-
+                return null;
             }
             finally
             {
                 con.Close();
             }
+            return null;
         }
     }
 }
