@@ -44,6 +44,7 @@
     <Compile Include="DALLoaiHang.cs" />
     <Compile Include="DALNhanVien.cs" />
     <Compile Include="DALMatHang.cs" />
+    <Compile Include="DALTimKiem.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

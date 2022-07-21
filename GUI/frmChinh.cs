@@ -65,5 +65,13 @@ namespace GUI
             f.MdiParent = this;
             f.Show();
         }
+
+        private void btnTimKiem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmTimKiem f = new frmTimKiem();
+            if (ExistForm(f)) return;
+            f.MdiParent = this;
+            f.Show();
+        }
     }
 }

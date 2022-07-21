@@ -42,6 +42,7 @@ namespace GUI
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvMHH = new System.Windows.Forms.DataGridView();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAdd = new System.Windows.Forms.ToolStripButton();
@@ -51,15 +52,14 @@ namespace GUI
             this.btnCancel = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.Edit = new System.Windows.Forms.ToolStripButton();
-            this.dgvMHH = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.navigationPane1.SuspendLayout();
             this.navigationPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMHH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMHH)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvMH
@@ -177,6 +177,16 @@ namespace GUI
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quản Lý";
             // 
+            // dgvMHH
+            // 
+            this.dgvMHH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMHH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMHH.Location = new System.Drawing.Point(3, 47);
+            this.dgvMHH.Name = "dgvMHH";
+            this.dgvMHH.Size = new System.Drawing.Size(743, 439);
+            this.dgvMHH.TabIndex = 11;
+            this.dgvMHH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMHH_CellClick);
+            // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = null;
@@ -258,16 +268,6 @@ namespace GUI
             this.Edit.Text = "Edit";
             this.Edit.Click += new System.EventHandler(this.Edit_Click_1);
             // 
-            // dgvMHH
-            // 
-            this.dgvMHH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMHH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMHH.Location = new System.Drawing.Point(3, 47);
-            this.dgvMHH.Name = "dgvMHH";
-            this.dgvMHH.Size = new System.Drawing.Size(743, 439);
-            this.dgvMHH.TabIndex = 11;
-            this.dgvMHH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMHH_CellClick);
-            // 
             // frmMH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,6 +278,7 @@ namespace GUI
             this.Controls.Add(this.dgvMH);
             this.Name = "frmMH";
             this.Text = "frmMH";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dgvMH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).EndInit();
             this.navigationPane1.ResumeLayout(false);
@@ -285,10 +286,10 @@ namespace GUI
             this.navigationPage2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMHH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMHH)).EndInit();
             this.ResumeLayout(false);
 
         }

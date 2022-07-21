@@ -98,7 +98,7 @@ namespace GUI
             this.vgtPageMH.Controls.Add(this.labelControl3);
             this.vgtPageMH.Controls.Add(this.labelControl2);
             this.vgtPageMH.Controls.Add(this.labelControl1);
-            this.vgtPageMH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.vgtPageMH.Margin = new System.Windows.Forms.Padding(4);
             this.vgtPageMH.Name = "vgtPageMH";
             this.vgtPageMH.Size = new System.Drawing.Size(196, 309);
             // 
@@ -107,7 +107,7 @@ namespace GUI
             this.btnDSMH.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDSMH.Appearance.Options.UseFont = true;
             this.btnDSMH.Location = new System.Drawing.Point(9, 243);
-            this.btnDSMH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDSMH.Margin = new System.Windows.Forms.Padding(4);
             this.btnDSMH.Name = "btnDSMH";
             this.btnDSMH.Size = new System.Drawing.Size(178, 62);
             this.btnDSMH.TabIndex = 7;
@@ -116,7 +116,7 @@ namespace GUI
             // txbIDLH
             // 
             this.txbIDLH.Location = new System.Drawing.Point(9, 210);
-            this.txbIDLH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbIDLH.Margin = new System.Windows.Forms.Padding(4);
             this.txbIDLH.Name = "txbIDLH";
             this.txbIDLH.Size = new System.Drawing.Size(116, 20);
             this.txbIDLH.TabIndex = 6;
@@ -124,7 +124,7 @@ namespace GUI
             // txbTenMH
             // 
             this.txbTenMH.Location = new System.Drawing.Point(9, 124);
-            this.txbTenMH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbTenMH.Margin = new System.Windows.Forms.Padding(4);
             this.txbTenMH.Name = "txbTenMH";
             this.txbTenMH.Size = new System.Drawing.Size(116, 20);
             this.txbTenMH.TabIndex = 5;
@@ -132,7 +132,7 @@ namespace GUI
             // txbMaMH
             // 
             this.txbMaMH.Location = new System.Drawing.Point(10, 42);
-            this.txbMaMH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbMaMH.Margin = new System.Windows.Forms.Padding(4);
             this.txbMaMH.Name = "txbMaMH";
             this.txbMaMH.Size = new System.Drawing.Size(116, 20);
             this.txbMaMH.TabIndex = 4;
@@ -140,7 +140,7 @@ namespace GUI
             // labelControl3
             // 
             this.labelControl3.Location = new System.Drawing.Point(9, 185);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(61, 13);
             this.labelControl3.TabIndex = 2;
@@ -149,7 +149,7 @@ namespace GUI
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(9, 101);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(36, 13);
             this.labelControl2.TabIndex = 1;
@@ -158,7 +158,7 @@ namespace GUI
             // labelControl1
             // 
             this.labelControl1.Location = new System.Drawing.Point(14, 18);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(32, 13);
             this.labelControl1.TabIndex = 0;
@@ -174,7 +174,7 @@ namespace GUI
             this.navigationPage1.Controls.Add(this.labelControl4);
             this.navigationPage1.Controls.Add(this.labelControl5);
             this.navigationPage1.Controls.Add(this.labelControl6);
-            this.navigationPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navigationPage1.Margin = new System.Windows.Forms.Padding(4);
             this.navigationPage1.Name = "navigationPage1";
             this.navigationPage1.Size = new System.Drawing.Size(196, 309);
             // 
@@ -183,7 +183,7 @@ namespace GUI
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.Location = new System.Drawing.Point(9, 243);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(178, 62);
             this.simpleButton1.TabIndex = 7;
@@ -192,7 +192,7 @@ namespace GUI
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(9, 210);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(116, 20);
             this.textBox1.TabIndex = 6;
@@ -200,7 +200,7 @@ namespace GUI
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(9, 124);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(116, 20);
             this.textBox2.TabIndex = 5;
@@ -208,7 +208,7 @@ namespace GUI
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(10, 42);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(116, 20);
             this.textBox3.TabIndex = 4;
@@ -216,7 +216,7 @@ namespace GUI
             // labelControl4
             // 
             this.labelControl4.Location = new System.Drawing.Point(9, 185);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(61, 13);
             this.labelControl4.TabIndex = 2;
@@ -225,7 +225,7 @@ namespace GUI
             // labelControl5
             // 
             this.labelControl5.Location = new System.Drawing.Point(9, 101);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(36, 13);
             this.labelControl5.TabIndex = 1;
@@ -234,7 +234,7 @@ namespace GUI
             // labelControl6
             // 
             this.labelControl6.Location = new System.Drawing.Point(14, 18);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(32, 13);
             this.labelControl6.TabIndex = 0;
@@ -321,7 +321,7 @@ namespace GUI
             // 
             this.navigationPane1.Controls.Add(this.navigationPage2);
             this.navigationPane1.Location = new System.Drawing.Point(-4, 8);
-            this.navigationPane1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navigationPane1.Margin = new System.Windows.Forms.Padding(4);
             this.navigationPane1.Name = "navigationPane1";
             this.navigationPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.navigationPage2});
@@ -348,7 +348,7 @@ namespace GUI
             this.btnDSLH.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDSLH.Appearance.Options.UseFont = true;
             this.btnDSLH.Location = new System.Drawing.Point(0, 244);
-            this.btnDSLH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDSLH.Margin = new System.Windows.Forms.Padding(4);
             this.btnDSLH.Name = "btnDSLH";
             this.btnDSLH.Size = new System.Drawing.Size(188, 42);
             this.btnDSLH.TabIndex = 7;
@@ -374,7 +374,7 @@ namespace GUI
             // labelControl15
             // 
             this.labelControl15.Location = new System.Drawing.Point(9, 29);
-            this.labelControl15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl15.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(33, 13);
             this.labelControl15.TabIndex = 1;
@@ -414,7 +414,7 @@ namespace GUI
             this.dgvMH.Size = new System.Drawing.Size(620, 458);
             this.dgvMH.TabIndex = 12;
             this.dgvMH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMH_CellClick);
-
+            // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = null;
@@ -550,6 +550,7 @@ namespace GUI
             this.Controls.Add(this.vgtPageMH);
             this.Name = "frmLH";
             this.Text = "frmLH";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMh_FormClosing);
             this.vgtPageMH.ResumeLayout(false);
             this.vgtPageMH.PerformLayout();
