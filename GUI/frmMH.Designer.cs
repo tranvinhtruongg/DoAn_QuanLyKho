@@ -89,7 +89,7 @@ namespace GUI
             // 
             // navigationPage2
             // 
-            this.navigationPage2.Caption = "Nhập Loại Hàng";
+            this.navigationPage2.Caption = "Nhập Mặt Hàng";
             this.navigationPage2.Controls.Add(this.labelControl1);
             this.navigationPage2.Controls.Add(this.txbViTri);
             this.navigationPage2.Controls.Add(this.btnDSLH);
@@ -99,7 +99,7 @@ namespace GUI
             this.navigationPage2.Controls.Add(this.labelControl16);
             this.navigationPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.navigationPage2.Name = "navigationPage2";
-            this.navigationPage2.Size = new System.Drawing.Size(175, 413);
+            this.navigationPage2.Size = new System.Drawing.Size(176, 413);
             // 
             // labelControl1
             // 

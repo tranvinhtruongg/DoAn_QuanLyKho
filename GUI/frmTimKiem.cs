@@ -22,7 +22,7 @@ namespace GUI
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            if(cmbLoaiHang.SelectedIndex==null && txbMatHang.Text=="")
+            if(cmbLoaiHang.SelectedIndex == null && txbMatHang.Text=="")
             {
                 MessageBox.Show("Chưa chọn thông tin,vui lòng nhập thông tin!");
             }
