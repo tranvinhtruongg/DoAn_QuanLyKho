@@ -28,7 +28,6 @@ namespace GUI
             }
             else
             {
-                MessageBox.Show("Tim kiếm thành công!");
                 dgvTimKem.DataSource = bll.timKiem(cmbLoaiHang.Text, txbMatHang.Text);
             }
         }
