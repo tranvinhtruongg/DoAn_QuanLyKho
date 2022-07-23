@@ -49,6 +49,7 @@
     <Compile Include="DALNhapHang.cs" />
     <Compile Include="DALTimKiem.cs" />
     <Compile Include="DataProvider.cs" />
+    <Compile Include="DALXuatHang.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

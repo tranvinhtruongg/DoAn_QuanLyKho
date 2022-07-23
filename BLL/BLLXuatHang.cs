@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 using DAL;
 namespace BLL
 {
-    public class BLLNhapHang
+    public class BLLXuatHang
     {
-        DALNhapHang dal = new DALNhapHang();
+        DALXuatHang dal = new DALXuatHang();
         public DataTable layDataMH()
         {
             return dal.layDataMH();
@@ -18,10 +18,9 @@ namespace BLL
         {
             return dal.layMH();
         }
-        public bool nhapMatHang(int ID_MatHang, string SoLuong, DateTime NgayLap,string ID_NhanVien,string ID_Kho)
+        public bool nhapMatHang(int ID_MatHang, string SoLuong, DateTime NgayLap, string ID_NhanVien, string ID_Kho)
         {
-            return dal.nhapMatHang(ID_MatHang, SoLuong,NgayLap,ID_NhanVien,ID_Kho);
+            return dal.nhapMatHang(ID_MatHang, SoLuong, NgayLap, ID_NhanVien, ID_Kho);
         }
     }
 }
-

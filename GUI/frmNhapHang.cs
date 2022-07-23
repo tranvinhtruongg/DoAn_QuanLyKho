@@ -22,7 +22,7 @@ namespace GUI
         {
             DataTable dt = bll.layDataMH();
             cbmMH.DataSource = dt;
-            cbmMH.DisplayMember = "tenMatHang";//Word là tên trường bạn muốn hiển thị trong
+            cbmMH.DisplayMember = "tenMatHang";//tenMatHang là tên trường bạn muốn hiển thị trong
             cbmMH.ValueMember = "ID";                                   
             
         }
@@ -33,7 +33,7 @@ namespace GUI
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txbSoLuong.Text == "" && txbDonGia.Text == "")
+            if (txbSoLuong.Text == "" && txbNhanVien.Text == "")
             {
                 MessageBox.Show("Thêm không thành công,vui lòng nhập dữ liệu!");
             }
@@ -41,8 +41,9 @@ namespace GUI
             {
                 var idMH = cbmMH.SelectedValue as int? ?? 0;
                 //var mh=cbmMH.SelectedItem.
-                //bll.ThemMatHang(txbSoLuong.Text, txbDonGia.Text);
+                bll.nhapMatHang(idMH,txbSoLuong.Text,dtpNS.Value,txbNhanVien.Text,txbIDKho.Text);
                 MessageBox.Show("Thêm thành công");
+                loadNhapHang();
                 //loadMH();
             }
         }
@@ -52,10 +53,11 @@ namespace GUI
             loadNhapHang();
         }
 
-        private void frmNhapHang_Load(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-
-            
+            txbNhanVien.Text = "";
+            txbSoLuong.Text = "";
+            txbIDKho.Text = "";
         }
     }
 }

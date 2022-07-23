@@ -98,5 +98,13 @@ namespace GUI
         {
             //btnNhanVien.Enabled = btnUser.Enabled = false;
         }
+
+        private void btnXuatHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmXuatHang f = new frmXuatHang();
+            if (ExistForm(f)) return;
+            f.MdiParent = this;
+            f.Show();
+        }
     }
 }
