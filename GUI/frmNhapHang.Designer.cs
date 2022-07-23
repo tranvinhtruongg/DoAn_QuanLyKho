@@ -65,13 +65,13 @@ namespace GUI
             // 
             this.navigationPane1.Controls.Add(this.navigationPage2);
             this.navigationPane1.Location = new System.Drawing.Point(0, 0);
-            this.navigationPane1.Margin = new System.Windows.Forms.Padding(4);
+            this.navigationPane1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.navigationPane1.Name = "navigationPane1";
             this.navigationPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.navigationPage2});
             this.navigationPane1.RegularSize = new System.Drawing.Size(301, 477);
             this.navigationPane1.SelectedPage = this.navigationPage2;
-            this.navigationPane1.Size = new System.Drawing.Size(301, 477);
+            this.navigationPane1.Size = new System.Drawing.Size(470, 745);
             this.navigationPane1.TabIndex = 36;
             this.navigationPane1.Text = "Nhập";
             // 
@@ -90,9 +90,9 @@ namespace GUI
             this.navigationPage2.Controls.Add(this.txbNhanVien);
             this.navigationPage2.Controls.Add(this.txbSoLuong);
             this.navigationPage2.Controls.Add(this.labelControl15);
-            this.navigationPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.navigationPage2.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
             this.navigationPage2.Name = "navigationPage2";
-            this.navigationPage2.Size = new System.Drawing.Size(193, 404);
+            this.navigationPage2.Size = new System.Drawing.Size(335, 655);
             // 
             // btnDSNhapMH
             // 
@@ -111,7 +111,7 @@ namespace GUI
             this.labelControl2.Location = new System.Drawing.Point(15, 17);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(36, 13);
+            this.labelControl2.Size = new System.Drawing.Size(44, 16);
             this.labelControl2.TabIndex = 11;
             this.labelControl2.Text = "Tên MH";
             // 
@@ -120,7 +120,7 @@ namespace GUI
             this.cbmMH.FormattingEnabled = true;
             this.cbmMH.Location = new System.Drawing.Point(14, 37);
             this.cbmMH.Name = "cbmMH";
-            this.cbmMH.Size = new System.Drawing.Size(121, 21);
+            this.cbmMH.Size = new System.Drawing.Size(186, 24);
             this.cbmMH.TabIndex = 10;
             // 
             // labelControl1
@@ -145,7 +145,7 @@ namespace GUI
             this.txbSoLuong.Location = new System.Drawing.Point(14, 105);
             this.txbSoLuong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbSoLuong.Name = "txbSoLuong";
-            this.txbSoLuong.Size = new System.Drawing.Size(116, 20);
+            this.txbSoLuong.Size = new System.Drawing.Size(179, 22);
             this.txbSoLuong.TabIndex = 5;
             // 
             // labelControl15
@@ -153,7 +153,7 @@ namespace GUI
             this.labelControl15.Location = new System.Drawing.Point(14, 79);
             this.labelControl15.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(45, 13);
+            this.labelControl15.Size = new System.Drawing.Size(60, 17);
             this.labelControl15.TabIndex = 1;
             this.labelControl15.Text = "Số Lượng";
             // 
@@ -164,7 +164,8 @@ namespace GUI
             this.groupBox1.AutoSize = true;
             this.groupBox1.Controls.Add(this.dgvNhapMH);
             this.groupBox1.Controls.Add(this.bindingNavigator1);
-            this.groupBox1.Location = new System.Drawing.Point(299, 3);
+            this.groupBox1.Location = new System.Drawing.Point(399, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(821, 500);
             this.groupBox1.TabIndex = 35;
@@ -175,9 +176,12 @@ namespace GUI
             // 
             this.dgvNhapMH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNhapMH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNhapMH.Location = new System.Drawing.Point(9, 54);
+            this.dgvNhapMH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvNhapMH.Location = new System.Drawing.Point(4, 46);
+            this.dgvNhapMH.Margin = new System.Windows.Forms.Padding(4);
             this.dgvNhapMH.Name = "dgvNhapMH";
-            this.dgvNhapMH.Size = new System.Drawing.Size(761, 427);
+            this.dgvNhapMH.RowHeadersWidth = 51;
+            this.dgvNhapMH.Size = new System.Drawing.Size(1087, 542);
             this.dgvNhapMH.TabIndex = 11;
             // 
             // bindingNavigator1
@@ -196,7 +200,7 @@ namespace GUI
             this.bindingNavigator1.MovePreviousItem = null;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = null;
-            this.bindingNavigator1.Size = new System.Drawing.Size(815, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1087, 27);
             this.bindingNavigator1.TabIndex = 10;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -205,19 +209,23 @@ namespace GUI
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.RightToLeftAutoMirrorImage = true;
-            this.btnAdd.Size = new System.Drawing.Size(53, 24);
+            this.btnAdd.Size = new System.Drawing.Size(61, 24);
             this.btnAdd.Text = "Add";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // toolStripButton1
+            // 
+
             // dgvMH
             // 
             this.dgvMH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMH.Location = new System.Drawing.Point(0, 0);
+            this.dgvMH.Margin = new System.Windows.Forms.Padding(4);
             this.dgvMH.Name = "dgvMH";
             this.dgvMH.RowHeadersWidth = 51;
-            this.dgvMH.Size = new System.Drawing.Size(1075, 486);
+            this.dgvMH.Size = new System.Drawing.Size(1433, 598);
             this.dgvMH.TabIndex = 34;
             // 
             // btnCancel
@@ -274,12 +282,13 @@ namespace GUI
             // 
             // frmNhapHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1075, 486);
+            this.ClientSize = new System.Drawing.Size(1433, 598);
             this.Controls.Add(this.navigationPane1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvMH);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmNhapHang";
             this.Text = "frmNhapHang";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

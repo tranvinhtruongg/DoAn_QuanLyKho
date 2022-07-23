@@ -46,6 +46,7 @@
     <Compile Include="BLLMatHang.cs" />
     <Compile Include="BLLNhapHang.cs" />
     <Compile Include="BLLTimKiem.cs" />
+    <Compile Include="BLLUser.cs" />
     <Compile Include="BLLXuatHang.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
