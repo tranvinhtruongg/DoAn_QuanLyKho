@@ -33,10 +33,11 @@ namespace GUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhapHang));
             this.navigationPane1 = new DevExpress.XtraBars.Navigation.NavigationPane();
             this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.btnDSNhapMH = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.cbmMH = new System.Windows.Forms.ComboBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txbDonGia = new System.Windows.Forms.TextBox();
+            this.txbNhanVien = new System.Windows.Forms.TextBox();
             this.txbSoLuong = new System.Windows.Forms.TextBox();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -44,7 +45,14 @@ namespace GUI
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.btnAdd = new System.Windows.Forms.ToolStripButton();
             this.dgvMH = new System.Windows.Forms.DataGridView();
-            this.btnDSNhapMH = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancel = new System.Windows.Forms.ToolStripButton();
+            this.txbIDKho = new System.Windows.Forms.TextBox();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.txbIDMatHang = new System.Windows.Forms.TextBox();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.dtpNS = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.navigationPane1.SuspendLayout();
             this.navigationPage2.SuspendLayout();
@@ -72,20 +80,39 @@ namespace GUI
             // navigationPage2
             // 
             this.navigationPage2.Caption = "Nhập Hàng";
+            this.navigationPage2.Controls.Add(this.dtpNS);
+            this.navigationPage2.Controls.Add(this.labelControl6);
             this.navigationPage2.Controls.Add(this.btnDSNhapMH);
+            this.navigationPage2.Controls.Add(this.labelControl5);
+            this.navigationPage2.Controls.Add(this.labelControl4);
+            this.navigationPage2.Controls.Add(this.txbIDMatHang);
+            this.navigationPage2.Controls.Add(this.labelControl3);
+            this.navigationPage2.Controls.Add(this.txbIDKho);
             this.navigationPage2.Controls.Add(this.labelControl2);
             this.navigationPage2.Controls.Add(this.cbmMH);
             this.navigationPage2.Controls.Add(this.labelControl1);
-            this.navigationPage2.Controls.Add(this.txbDonGia);
+            this.navigationPage2.Controls.Add(this.txbNhanVien);
             this.navigationPage2.Controls.Add(this.txbSoLuong);
             this.navigationPage2.Controls.Add(this.labelControl15);
             this.navigationPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.navigationPage2.Name = "navigationPage2";
             this.navigationPage2.Size = new System.Drawing.Size(193, 404);
             // 
+            // btnDSNhapMH
+            // 
+            this.btnDSNhapMH.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDSNhapMH.Appearance.Options.UseFont = true;
+            this.btnDSNhapMH.Location = new System.Drawing.Point(15, 356);
+            this.btnDSNhapMH.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDSNhapMH.Name = "btnDSNhapMH";
+            this.btnDSNhapMH.Size = new System.Drawing.Size(141, 42);
+            this.btnDSNhapMH.TabIndex = 12;
+            this.btnDSNhapMH.Text = "Hiển thị danh sách";
+            this.btnDSNhapMH.Click += new System.EventHandler(this.btnDSNhapMH_Click);
+            // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(15, 52);
+            this.labelControl2.Location = new System.Drawing.Point(15, 17);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(36, 13);
@@ -95,31 +122,31 @@ namespace GUI
             // cbmMH
             // 
             this.cbmMH.FormattingEnabled = true;
-            this.cbmMH.Location = new System.Drawing.Point(14, 72);
+            this.cbmMH.Location = new System.Drawing.Point(14, 37);
             this.cbmMH.Name = "cbmMH";
             this.cbmMH.Size = new System.Drawing.Size(121, 21);
             this.cbmMH.TabIndex = 10;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(15, 210);
+            this.labelControl1.Location = new System.Drawing.Point(15, 140);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(38, 13);
+            this.labelControl1.Size = new System.Drawing.Size(62, 13);
             this.labelControl1.TabIndex = 9;
-            this.labelControl1.Text = "Đơn Giá";
+            this.labelControl1.Text = "ID Nhân viên";
             // 
-            // txbDonGia
+            // txbNhanVien
             // 
-            this.txbDonGia.Location = new System.Drawing.Point(14, 230);
-            this.txbDonGia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txbDonGia.Name = "txbDonGia";
-            this.txbDonGia.Size = new System.Drawing.Size(116, 20);
-            this.txbDonGia.TabIndex = 8;
+            this.txbNhanVien.Location = new System.Drawing.Point(14, 160);
+            this.txbNhanVien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbNhanVien.Name = "txbNhanVien";
+            this.txbNhanVien.Size = new System.Drawing.Size(116, 20);
+            this.txbNhanVien.TabIndex = 8;
             // 
             // txbSoLuong
             // 
-            this.txbSoLuong.Location = new System.Drawing.Point(14, 150);
+            this.txbSoLuong.Location = new System.Drawing.Point(14, 105);
             this.txbSoLuong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbSoLuong.Name = "txbSoLuong";
             this.txbSoLuong.Size = new System.Drawing.Size(116, 20);
@@ -127,7 +154,7 @@ namespace GUI
             // 
             // labelControl15
             // 
-            this.labelControl15.Location = new System.Drawing.Point(14, 124);
+            this.labelControl15.Location = new System.Drawing.Point(14, 79);
             this.labelControl15.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(45, 13);
@@ -138,11 +165,12 @@ namespace GUI
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.AutoSize = true;
             this.groupBox1.Controls.Add(this.dgvNhapMH);
             this.groupBox1.Controls.Add(this.bindingNavigator1);
             this.groupBox1.Location = new System.Drawing.Point(299, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(821, 481);
+            this.groupBox1.Size = new System.Drawing.Size(821, 500);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quản Lý";
@@ -163,7 +191,8 @@ namespace GUI
             this.bindingNavigator1.DeleteItem = null;
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnAdd});
+            this.btnAdd,
+            this.btnCancel});
             this.bindingNavigator1.Location = new System.Drawing.Point(3, 16);
             this.bindingNavigator1.MoveFirstItem = null;
             this.bindingNavigator1.MoveLastItem = null;
@@ -195,17 +224,74 @@ namespace GUI
             this.dgvMH.Size = new System.Drawing.Size(1075, 486);
             this.dgvMH.TabIndex = 34;
             // 
-            // btnDSNhapMH
+            // btnCancel
             // 
-            this.btnDSNhapMH.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDSNhapMH.Appearance.Options.UseFont = true;
-            this.btnDSNhapMH.Location = new System.Drawing.Point(15, 289);
-            this.btnDSNhapMH.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDSNhapMH.Name = "btnDSNhapMH";
-            this.btnDSNhapMH.Size = new System.Drawing.Size(141, 42);
-            this.btnDSNhapMH.TabIndex = 12;
-            this.btnDSNhapMH.Text = "Hiển thị danh sách";
-            this.btnDSNhapMH.Click += new System.EventHandler(this.btnDSNhapMH_Click);
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.RightToLeftAutoMirrorImage = true;
+            this.btnCancel.Size = new System.Drawing.Size(70, 24);
+            this.btnCancel.Text = " Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // txbIDKho
+            // 
+            this.txbIDKho.Location = new System.Drawing.Point(15, 219);
+            this.txbIDKho.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbIDKho.Name = "txbIDKho";
+            this.txbIDKho.Size = new System.Drawing.Size(116, 20);
+            this.txbIDKho.TabIndex = 13;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(15, 196);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(32, 13);
+            this.labelControl3.TabIndex = 14;
+            this.labelControl3.Text = "ID Kho";
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(15, 249);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(0, 13);
+            this.labelControl4.TabIndex = 16;
+            // 
+            // txbIDMatHang
+            // 
+            this.txbIDMatHang.Location = new System.Drawing.Point(15, 272);
+            this.txbIDMatHang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbIDMatHang.Name = "txbIDMatHang";
+            this.txbIDMatHang.Size = new System.Drawing.Size(116, 20);
+            this.txbIDMatHang.TabIndex = 15;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(15, 249);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(60, 13);
+            this.labelControl5.TabIndex = 17;
+            this.labelControl5.Text = "ID Mặt Hàng";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(14, 301);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(45, 13);
+            this.labelControl6.TabIndex = 18;
+            this.labelControl6.Text = "Số Lượng";
+            // 
+            // dtpNS
+            // 
+            this.dtpNS.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNS.Location = new System.Drawing.Point(14, 320);
+            this.dtpNS.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpNS.Name = "dtpNS";
+            this.dtpNS.Size = new System.Drawing.Size(132, 20);
+            this.dtpNS.TabIndex = 19;
             // 
             // frmNhapHang
             // 
@@ -230,6 +316,7 @@ namespace GUI
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMH)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -238,7 +325,7 @@ namespace GUI
         private DevExpress.XtraBars.Navigation.NavigationPane navigationPane1;
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPage2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private System.Windows.Forms.TextBox txbDonGia;
+        private System.Windows.Forms.TextBox txbNhanVien;
         private System.Windows.Forms.TextBox txbSoLuong;
         private DevExpress.XtraEditors.LabelControl labelControl15;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -249,5 +336,13 @@ namespace GUI
         private System.Windows.Forms.ComboBox cbmMH;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.SimpleButton btnDSNhapMH;
+        private System.Windows.Forms.ToolStripButton btnCancel;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private System.Windows.Forms.TextBox txbIDMatHang;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private System.Windows.Forms.TextBox txbIDKho;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private System.Windows.Forms.DateTimePicker dtpNS;
     }
 }

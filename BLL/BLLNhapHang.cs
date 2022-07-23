@@ -18,6 +18,10 @@ namespace BLL
         {
             return dal.layMH();
         }
+        public bool nhapMatHang(int ID_MatHang, string SoLuong, DateTime NgayLap,string ID_NhanVien,string ID_Kho)
+        {
+            return dal.nhapMatHang(ID_MatHang, SoLuong,NgayLap,ID_NhanVien,ID_Kho);
+        }
     }
 }
 
