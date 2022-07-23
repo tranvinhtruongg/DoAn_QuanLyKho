@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmPhieuXuat : Form
+    public partial class FrmReport : Form
     {
-        public frmPhieuXuat()
+        public FrmReport()
         {
             InitializeComponent();
-        }
-
-        private void frmPhieuXuat_Load(object sender, EventArgs e)
-        {
-
-            
         }
     }
 }

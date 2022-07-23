@@ -35,15 +35,8 @@ namespace GUI
             this.txbMaPX = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvXuat = new System.Windows.Forms.DataGridView();
-            this.lblTongTien = new System.Windows.Forms.Label();
-            this.txbTongTien = new System.Windows.Forms.TextBox();
             this.dtpNgayXuat = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.MaPX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenMH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuongXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGiaXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnReport = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvXuat)).BeginInit();
             this.SuspendLayout();
@@ -95,12 +88,6 @@ namespace GUI
             // dtgvXuat
             // 
             this.dtgvXuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvXuat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaPX,
-            this.TenMH,
-            this.SoLuongXuat,
-            this.DonGiaXuat,
-            this.ThanhTien});
             this.dtgvXuat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvXuat.Location = new System.Drawing.Point(0, 0);
             this.dtgvXuat.Name = "dtgvXuat";
@@ -108,25 +95,6 @@ namespace GUI
             this.dtgvXuat.RowTemplate.Height = 24;
             this.dtgvXuat.Size = new System.Drawing.Size(790, 222);
             this.dtgvXuat.TabIndex = 0;
-            // 
-            // lblTongTien
-            // 
-            this.lblTongTien.AutoSize = true;
-            this.lblTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTongTien.Location = new System.Drawing.Point(532, 420);
-            this.lblTongTien.Name = "lblTongTien";
-            this.lblTongTien.Size = new System.Drawing.Size(78, 20);
-            this.lblTongTien.TabIndex = 6;
-            this.lblTongTien.Text = "Tổng tiền";
-            // 
-            // txbTongTien
-            // 
-            this.txbTongTien.Location = new System.Drawing.Point(621, 410);
-            this.txbTongTien.Multiline = true;
-            this.txbTongTien.Name = "txbTongTien";
-            this.txbTongTien.Size = new System.Drawing.Size(181, 35);
-            this.txbTongTien.TabIndex = 7;
-            this.txbTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // dtpNgayXuat
             // 
@@ -136,68 +104,22 @@ namespace GUI
             this.dtpNgayXuat.Size = new System.Drawing.Size(149, 22);
             this.dtpNgayXuat.TabIndex = 8;
             // 
-            // button1
+            // btnReport
             // 
-            this.button1.Location = new System.Drawing.Point(579, 115);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // MaPX
-            // 
-            this.MaPX.DataPropertyName = "ID";
-            this.MaPX.HeaderText = "Mã PX";
-            this.MaPX.MinimumWidth = 6;
-            this.MaPX.Name = "MaPX";
-            this.MaPX.Width = 150;
-            // 
-            // TenMH
-            // 
-            this.TenMH.DataPropertyName = "TenMatHang";
-            this.TenMH.HeaderText = "Tên hàng";
-            this.TenMH.MinimumWidth = 6;
-            this.TenMH.Name = "TenMH";
-            this.TenMH.Width = 150;
-            // 
-            // SoLuongXuat
-            // 
-            this.SoLuongXuat.DataPropertyName = "SoLuong";
-            this.SoLuongXuat.HeaderText = "Số lượng";
-            this.SoLuongXuat.MinimumWidth = 6;
-            this.SoLuongXuat.Name = "SoLuongXuat";
-            this.SoLuongXuat.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.SoLuongXuat.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.SoLuongXuat.Width = 150;
-            // 
-            // DonGiaXuat
-            // 
-            this.DonGiaXuat.DataPropertyName = "DonGia";
-            this.DonGiaXuat.HeaderText = "Đơn giá";
-            this.DonGiaXuat.MinimumWidth = 6;
-            this.DonGiaXuat.Name = "DonGiaXuat";
-            this.DonGiaXuat.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.DonGiaXuat.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.DonGiaXuat.Width = 150;
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.DataPropertyName = "ThanhTien";
-            this.ThanhTien.HeaderText = "Thành tiền";
-            this.ThanhTien.MinimumWidth = 6;
-            this.ThanhTien.Name = "ThanhTien";
-            this.ThanhTien.Width = 150;
+            this.btnReport.Location = new System.Drawing.Point(679, 141);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(123, 35);
+            this.btnReport.TabIndex = 9;
+            this.btnReport.Text = "Report";
+            this.btnReport.UseVisualStyleBackColor = true;
             // 
             // frmPhieuXuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 449);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.dtpNgayXuat);
-            this.Controls.Add(this.txbTongTien);
-            this.Controls.Add(this.lblTongTien);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txbMaPX);
             this.Controls.Add(this.lblNgayXuat);
@@ -205,6 +127,7 @@ namespace GUI
             this.Controls.Add(this.lblTen);
             this.Name = "frmPhieuXuat";
             this.Text = "frmPhieuXuat";
+            this.Load += new System.EventHandler(this.frmPhieuXuat_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvXuat)).EndInit();
             this.ResumeLayout(false);
@@ -220,14 +143,7 @@ namespace GUI
         private System.Windows.Forms.TextBox txbMaPX;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dtgvXuat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaPX;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenMH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongXuat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DonGiaXuat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
-        private System.Windows.Forms.Label lblTongTien;
-        private System.Windows.Forms.TextBox txbTongTien;
         private System.Windows.Forms.DateTimePicker dtpNgayXuat;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnReport;
     }
 }

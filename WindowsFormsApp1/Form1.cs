@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI
+namespace WindowsFormsApp1
 {
-    public partial class frmPhieuXuat : Form
+    public partial class Form1 : Form
     {
-        public frmPhieuXuat()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void frmPhieuXuat_Load(object sender, EventArgs e)
-        {
-
-            
         }
     }
 }

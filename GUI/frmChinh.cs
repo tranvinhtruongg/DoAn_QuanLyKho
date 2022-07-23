@@ -36,10 +36,8 @@ namespace GUI
         }
         private void frmChinh_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //DialogResult h = MessageBox.Show
-            //    ("Bạn có chắc muốn thoát không?", "Error", MessageBoxButtons.OKCancel);
-            //if (h == DialogResult.OK)
-            //    Application.Exit();
+           
+                Application.Exit();
         }
 
         private void btnNhapMH_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -80,6 +78,25 @@ namespace GUI
             if (ExistForm(f)) return;
             f.MdiParent = this;
             f.Show();
+        }
+
+        private void btnUser_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmUser f = new frmUser();
+            if (ExistForm(f)) return;
+            f.MdiParent = this;
+            f.Show();
+        }
+        public event EventHandler Logout;
+        public bool isExit=true;
+        private void btnLogout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Logout(this, new EventArgs());
+        }
+
+        private void frmChinh_Load(object sender, EventArgs e)
+        {
+            //btnNhanVien.Enabled = btnUser.Enabled = false;
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
-namespace GUI
+namespace WindowsFormsApp1
 {
-    partial class frmXuatHang
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -29,20 +29,13 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // frmXuatHang
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmXuatHang";
-            this.Text = "frmXuatHang";
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "Form1";
         }
 
         #endregion
     }
 }
+

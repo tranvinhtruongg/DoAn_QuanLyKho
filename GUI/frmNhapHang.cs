@@ -51,5 +51,11 @@ namespace GUI
         {
             loadNhapHang();
         }
+
+        private void frmNhapHang_Load(object sender, EventArgs e)
+        {
+
+            
+        }
     }
 }
