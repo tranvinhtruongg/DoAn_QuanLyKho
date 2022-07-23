@@ -26,6 +26,7 @@ namespace DAL
             daa.Fill(dtMatHang);
             return dtMatHang;
         }
+        
         public bool nhapMatHang(int ID_MatHang, string SoLuong, DateTime NgayLap, string ID_NhanVien, string ID_Kho)
         {
             try
@@ -55,6 +56,7 @@ namespace DAL
                 cmdd.Parameters.Add("@SoLuong", SqlDbType.Int);
                 cmdd.Parameters["@SoLuong"].Value = SoLuong;
                 cmdd.ExecuteNonQuery();
+                
                 //int modified = (int)cmd.ExecuteScalar();
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
@@ -65,6 +67,7 @@ namespace DAL
                 return false;
             }
             return false;
+            
         }
     }
 }
