@@ -8,9 +8,8 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class DALNhapHang : DBConnect
+    public class DALXuatHang :DBConnect
     {
-        //combobox
         public DataTable layDataMH()
         {
             DataTable dtDSTimKiem = new DataTable();
@@ -27,12 +26,12 @@ namespace DAL
             daa.Fill(dtMatHang);
             return dtMatHang;
         }
-        public bool nhapMatHang(int ID_MatHang,string SoLuong,DateTime NgayLap, string ID_NhanVien,string ID_Kho)
+        public bool nhapMatHang(int ID_MatHang, string SoLuong, DateTime NgayLap, string ID_NhanVien, string ID_Kho)
         {
             try
             {
                 //string sql = @"INSERT INTO MATHANG(TenMatHang,ViTri,ID_LH) VALUES ( @TenMH,@ViTri, @ID_LoaiHang)";
-                string sql = @"INSERT INTO PHIEUXUAT (SoLuong,NgayLap,ID_NhanVien,ID_Kho,ID_MatHang) VALUES (@SoLuong,@NgayLap,@ID_NhanVien,@ID_Kho,@ID_MatHang)    ";
+                string sql = @"INSERT INTO PHIEUNHAP (SoLuong,NgayLap,ID_NhanVien,ID_Kho,ID_MatHang) VALUES (@SoLuong,@NgayLap,@ID_NhanVien,@ID_Kho,@ID_MatHang)    ";
                 con.Open();
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.CommandType = CommandType.Text;
@@ -48,7 +47,7 @@ namespace DAL
                 cmd.Parameters["@ID_Kho"].Value = ID_Kho;
                 /////update soluongton
                 ///
-                string update = @"update MATHANG set SoLuongTon=SoLuongTon+@SoLuong where ID=@ID_MatHang";
+                string update = @"update MATHANG set SoLuongTon=SoLuongTon-@SoLuong where ID=@ID_MatHang";
                 SqlCommand cmdd = new SqlCommand(update, con);
                 cmdd.CommandType = CommandType.Text;
                 cmdd.Parameters.Add("@ID_MatHang", SqlDbType.NVarChar);
@@ -61,7 +60,7 @@ namespace DAL
                     return true;
                 con.Close();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return false;
             }

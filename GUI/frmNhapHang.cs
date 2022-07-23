@@ -57,6 +57,7 @@ namespace GUI
         {
             txbNhanVien.Text = "";
             txbSoLuong.Text = "";
+            txbIDKho.Text = "";
         }
     }
 }

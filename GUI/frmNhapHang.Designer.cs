@@ -49,8 +49,6 @@ namespace GUI
             this.txbIDKho = new System.Windows.Forms.TextBox();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.txbIDMatHang = new System.Windows.Forms.TextBox();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.dtpNS = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
@@ -83,9 +81,7 @@ namespace GUI
             this.navigationPage2.Controls.Add(this.dtpNS);
             this.navigationPage2.Controls.Add(this.labelControl6);
             this.navigationPage2.Controls.Add(this.btnDSNhapMH);
-            this.navigationPage2.Controls.Add(this.labelControl5);
             this.navigationPage2.Controls.Add(this.labelControl4);
-            this.navigationPage2.Controls.Add(this.txbIDMatHang);
             this.navigationPage2.Controls.Add(this.labelControl3);
             this.navigationPage2.Controls.Add(this.txbIDKho);
             this.navigationPage2.Controls.Add(this.labelControl2);
@@ -102,7 +98,7 @@ namespace GUI
             // 
             this.btnDSNhapMH.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDSNhapMH.Appearance.Options.UseFont = true;
-            this.btnDSNhapMH.Location = new System.Drawing.Point(15, 356);
+            this.btnDSNhapMH.Location = new System.Drawing.Point(15, 316);
             this.btnDSNhapMH.Margin = new System.Windows.Forms.Padding(4);
             this.btnDSNhapMH.Name = "btnDSNhapMH";
             this.btnDSNhapMH.Size = new System.Drawing.Size(141, 42);
@@ -258,26 +254,9 @@ namespace GUI
             this.labelControl4.Size = new System.Drawing.Size(0, 13);
             this.labelControl4.TabIndex = 16;
             // 
-            // txbIDMatHang
-            // 
-            this.txbIDMatHang.Location = new System.Drawing.Point(15, 272);
-            this.txbIDMatHang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txbIDMatHang.Name = "txbIDMatHang";
-            this.txbIDMatHang.Size = new System.Drawing.Size(116, 20);
-            this.txbIDMatHang.TabIndex = 15;
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Location = new System.Drawing.Point(15, 249);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(60, 13);
-            this.labelControl5.TabIndex = 17;
-            this.labelControl5.Text = "ID Mặt Hàng";
-            // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(14, 301);
+            this.labelControl6.Location = new System.Drawing.Point(14, 261);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(45, 13);
@@ -287,7 +266,7 @@ namespace GUI
             // dtpNS
             // 
             this.dtpNS.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNS.Location = new System.Drawing.Point(14, 320);
+            this.dtpNS.Location = new System.Drawing.Point(14, 280);
             this.dtpNS.Margin = new System.Windows.Forms.Padding(2);
             this.dtpNS.Name = "dtpNS";
             this.dtpNS.Size = new System.Drawing.Size(132, 20);
@@ -337,9 +316,7 @@ namespace GUI
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.SimpleButton btnDSNhapMH;
         private System.Windows.Forms.ToolStripButton btnCancel;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private System.Windows.Forms.TextBox txbIDMatHang;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private System.Windows.Forms.TextBox txbIDKho;
         private DevExpress.XtraEditors.LabelControl labelControl6;
