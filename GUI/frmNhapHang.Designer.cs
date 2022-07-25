@@ -51,6 +51,10 @@ namespace GUI
             this.btnAdd = new System.Windows.Forms.ToolStripButton();
             this.btnCancel = new System.Windows.Forms.ToolStripButton();
             this.dgvMH = new System.Windows.Forms.DataGridView();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.dtpNS = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.navigationPane1.SuspendLayout();
             this.navigationPage2.SuspendLayout();
@@ -58,20 +62,20 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhapMH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMH)).BeginInit();
             this.SuspendLayout();
             // 
             // navigationPane1
-            // 
-            this.navigationPane1.Controls.Add(this.navigationPage2);
-            this.navigationPane1.Location = new System.Drawing.Point(0, 0);
             this.navigationPane1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.navigationPane1.Name = "navigationPane1";
-            this.navigationPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
-            this.navigationPage2});
+            this.navigationPane1.Controls.Add(this.navigationPage2);
+            this.navigationPane1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.navigationPane1.Location = new System.Drawing.Point(0, 0);
             this.navigationPane1.RegularSize = new System.Drawing.Size(297, 605);
-            this.navigationPane1.SelectedPage = this.navigationPage2;
+            this.navigationPane1.Name = "navigationPane1";
             this.navigationPane1.Size = new System.Drawing.Size(297, 605);
+            this.navigationPage2});
+            this.navigationPane1.RegularSize = new System.Drawing.Size(301, 477);
+            this.navigationPane1.SelectedPage = this.navigationPage2;
+            this.navigationPane1.Size = new System.Drawing.Size(470, 745);
             this.navigationPane1.TabIndex = 36;
             this.navigationPane1.Text = "Nhập";
             // 
@@ -86,14 +90,10 @@ namespace GUI
             this.navigationPage2.Controls.Add(this.txbIDKho);
             this.navigationPage2.Controls.Add(this.labelControl2);
             this.navigationPage2.Controls.Add(this.cbmMH);
-            this.navigationPage2.Controls.Add(this.labelControl1);
-            this.navigationPage2.Controls.Add(this.txbNhanVien);
-            this.navigationPage2.Controls.Add(this.txbSoLuong);
-            this.navigationPage2.Controls.Add(this.labelControl15);
             this.navigationPage2.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.navigationPage2.Name = "navigationPage2";
+            this.navigationPage2.Controls.Add(this.txbNhanVien);
             this.navigationPage2.Size = new System.Drawing.Size(189, 532);
-            // 
+            this.navigationPage2.Controls.Add(this.labelControl15);
             // dtpNS
             // 
             this.dtpNS.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -111,17 +111,17 @@ namespace GUI
             this.labelControl6.TabIndex = 18;
             this.labelControl6.Text = "Số Lượng";
             // 
+            this.navigationPage2.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.navigationPage2.Name = "navigationPage2";
+            this.navigationPage2.Size = new System.Drawing.Size(335, 655);
+            // 
             // btnDSNhapMH
             // 
-            this.btnDSNhapMH.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDSNhapMH.Size = new System.Drawing.Size(106, 34);
             this.btnDSNhapMH.Appearance.Options.UseFont = true;
             this.btnDSNhapMH.Location = new System.Drawing.Point(11, 257);
             this.btnDSNhapMH.Name = "btnDSNhapMH";
-            this.btnDSNhapMH.Size = new System.Drawing.Size(106, 34);
-            this.btnDSNhapMH.TabIndex = 12;
-            this.btnDSNhapMH.Text = "Hiển thị danh sách";
-            this.btnDSNhapMH.Click += new System.EventHandler(this.btnDSNhapMH_Click);
-            // 
+            this.btnDSNhapMH.Size = new System.Drawing.Size(141, 42);
             // labelControl4
             // 
             this.labelControl4.Location = new System.Drawing.Point(11, 202);
@@ -147,6 +147,10 @@ namespace GUI
             this.txbIDKho.Size = new System.Drawing.Size(88, 20);
             this.txbIDKho.TabIndex = 13;
             // 
+            this.btnDSNhapMH.TabIndex = 12;
+            this.btnDSNhapMH.Text = "Hiển thị danh sách";
+            this.btnDSNhapMH.Click += new System.EventHandler(this.btnDSNhapMH_Click);
+            // 
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(11, 14);
@@ -169,16 +173,16 @@ namespace GUI
             this.labelControl1.Location = new System.Drawing.Point(11, 114);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(62, 13);
+            this.labelControl1.Size = new System.Drawing.Size(72, 16);
             this.labelControl1.TabIndex = 9;
             this.labelControl1.Text = "ID Nhân viên";
             // 
             // txbNhanVien
-            // 
+            this.txbNhanVien.Size = new System.Drawing.Size(88, 20);
             this.txbNhanVien.Location = new System.Drawing.Point(10, 130);
             this.txbNhanVien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbNhanVien.Name = "txbNhanVien";
-            this.txbNhanVien.Size = new System.Drawing.Size(88, 20);
+            this.txbNhanVien.Size = new System.Drawing.Size(116, 20);
             this.txbNhanVien.TabIndex = 8;
             // 
             // txbSoLuong
@@ -200,27 +204,27 @@ namespace GUI
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.AutoSize = true;
-            this.groupBox1.Controls.Add(this.dgvNhapMH);
-            this.groupBox1.Controls.Add(this.bindingNavigator1);
             this.groupBox1.Location = new System.Drawing.Point(299, 3);
-            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Controls.Add(this.dgvNhapMH);
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Size = new System.Drawing.Size(616, 406);
+            this.groupBox1.Location = new System.Drawing.Point(399, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(821, 500);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quản Lý";
             // 
             // dgvNhapMH
-            // 
-            this.dgvNhapMH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvNhapMH.Location = new System.Drawing.Point(2, 42);
             this.dgvNhapMH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhapMH.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvNhapMH.Location = new System.Drawing.Point(2, 42);
+            this.dgvNhapMH.Size = new System.Drawing.Size(612, 362);
+            this.dgvNhapMH.Margin = new System.Windows.Forms.Padding(4);
             this.dgvNhapMH.Name = "dgvNhapMH";
             this.dgvNhapMH.RowHeadersWidth = 51;
-            this.dgvNhapMH.Size = new System.Drawing.Size(612, 362);
+            this.dgvNhapMH.Size = new System.Drawing.Size(1087, 542);
             this.dgvNhapMH.TabIndex = 11;
             // 
             // bindingNavigator1
@@ -228,18 +232,18 @@ namespace GUI
             this.bindingNavigator1.AddNewItem = null;
             this.bindingNavigator1.CountItem = null;
             this.bindingNavigator1.DeleteItem = null;
-            this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.bindingNavigator1.Location = new System.Drawing.Point(2, 15);
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnAdd,
             this.btnCancel});
-            this.bindingNavigator1.Location = new System.Drawing.Point(2, 15);
+            this.bindingNavigator1.Location = new System.Drawing.Point(3, 16);
             this.bindingNavigator1.MoveFirstItem = null;
             this.bindingNavigator1.MoveLastItem = null;
-            this.bindingNavigator1.MoveNextItem = null;
+            this.bindingNavigator1.Size = new System.Drawing.Size(612, 27);
             this.bindingNavigator1.MovePreviousItem = null;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = null;
-            this.bindingNavigator1.Size = new System.Drawing.Size(612, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1087, 27);
             this.bindingNavigator1.TabIndex = 10;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -248,10 +252,6 @@ namespace GUI
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.RightToLeftAutoMirrorImage = true;
-            this.btnAdd.Size = new System.Drawing.Size(53, 24);
-            this.btnAdd.Text = "Add";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
             // btnCancel
             // 
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
@@ -272,14 +272,66 @@ namespace GUI
             this.dgvMH.Size = new System.Drawing.Size(1075, 486);
             this.dgvMH.TabIndex = 34;
             // 
+            // 
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.RightToLeftAutoMirrorImage = true;
+            this.ClientSize = new System.Drawing.Size(1075, 486);
+            this.btnCancel.Text = " Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.Controls.Add(this.dgvMH);
+            // txbIDKho
+            // 
+            this.txbIDKho.Location = new System.Drawing.Point(15, 219);
+            this.txbIDKho.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbIDKho.Name = "txbIDKho";
+            this.txbIDKho.Size = new System.Drawing.Size(116, 20);
+            this.txbIDKho.TabIndex = 13;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(15, 196);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(32, 13);
+            this.labelControl3.TabIndex = 14;
+            this.labelControl3.Text = "ID Kho";
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(15, 249);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(0, 13);
+            this.labelControl4.TabIndex = 16;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(14, 261);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(45, 13);
+            this.labelControl6.TabIndex = 18;
+            this.labelControl6.Text = "Số Lượng";
+            // 
+            // dtpNS
+            // 
+            this.dtpNS.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNS.Location = new System.Drawing.Point(14, 280);
+            this.dtpNS.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpNS.Name = "dtpNS";
+            this.dtpNS.Size = new System.Drawing.Size(132, 20);
+            this.dtpNS.TabIndex = 19;
+            // 
             // frmNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1075, 486);
+            this.ClientSize = new System.Drawing.Size(1433, 598);
             this.Controls.Add(this.navigationPane1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvMH);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmNhapHang";
             this.Text = "frmNhapHang";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -293,7 +345,6 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,7 +362,6 @@ namespace GUI
         private System.Windows.Forms.DataGridView dgvNhapMH;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripButton btnAdd;
-        private System.Windows.Forms.DataGridView dgvMH;
         private System.Windows.Forms.ComboBox cbmMH;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.SimpleButton btnDSNhapMH;
