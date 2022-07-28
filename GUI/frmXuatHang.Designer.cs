@@ -115,9 +115,9 @@ namespace GUI
             this.labelControl6.Location = new System.Drawing.Point(18, 325);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(5);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(60, 17);
+            this.labelControl6.Size = new System.Drawing.Size(64, 17);
             this.labelControl6.TabIndex = 18;
-            this.labelControl6.Text = "Số Lượng";
+            this.labelControl6.Text = "Ngày xuất";
             // 
             // btnDSNhapMH
             // 
