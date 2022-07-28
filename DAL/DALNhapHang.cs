@@ -59,11 +59,13 @@ namespace DAL
                 cmdd.ExecuteNonQuery();
                 con.Close();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
+                con.Close();
                 return false;
             }
             return false;
+
         }
     }
 }

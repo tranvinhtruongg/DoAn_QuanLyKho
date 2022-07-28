@@ -60,9 +60,11 @@ namespace DAL
             }
             catch (Exception e)
             {
+                con.Close();
                 return false;
             }
             return false;
+            
         }
     }
 }

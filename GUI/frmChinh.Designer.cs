@@ -156,7 +156,7 @@ namespace GUI
             this.btnNhapHang,
             this.btnXuatHang});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.ribbon.Margin = new System.Windows.Forms.Padding(10);
             this.ribbon.MaxItemId = 56;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -188,6 +188,7 @@ namespace GUI
             this.báo.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("báo.ImageOptions.Image")));
             this.báo.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("báo.ImageOptions.LargeImage")));
             this.báo.Name = "báo";
+            this.báo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.báo_ItemClick);
             // 
             // barButtonItem3
             // 
@@ -337,8 +338,8 @@ namespace GUI
             // 
             this.btnLogout.Caption = "Đăng xuất";
             this.btnLogout.Id = 27;
-            this.btnLogout.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.ImageOptions.Image")));
-            this.btnLogout.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.ImageOptions.LargeImage")));
+            this.btnLogout.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.ImageOptions.Image")));
+            this.btnLogout.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLogout.ImageOptions.LargeImage")));
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLogout_ItemClick);
             // 
@@ -569,7 +570,7 @@ namespace GUI
             // 
             this.rbpTaiKhoan.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup6});
-            this.rbpTaiKhoan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage6.ImageOptions.Image")));
+            this.rbpTaiKhoan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("rbpTaiKhoan.ImageOptions.Image")));
             this.rbpTaiKhoan.Name = "rbpTaiKhoan";
             this.rbpTaiKhoan.Text = "Tài Khoản";
             // 
@@ -610,7 +611,7 @@ namespace GUI
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 710);
-            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(8);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
             this.ribbonStatusBar.Size = new System.Drawing.Size(1141, 30);

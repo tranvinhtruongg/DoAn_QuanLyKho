@@ -106,5 +106,13 @@ namespace GUI
             f.MdiParent = this;
             f.Show();
         }
+
+        private void báo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Report r = new Report();
+            if (ExistForm(r)) return;
+            r.MdiParent = this;
+            r.Show();
+        }
     }
 }
