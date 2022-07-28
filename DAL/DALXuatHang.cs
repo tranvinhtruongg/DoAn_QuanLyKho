@@ -31,7 +31,7 @@ namespace DAL
             try
             {
                 //string sql = @"INSERT INTO MATHANG(TenMatHang,ViTri,ID_LH) VALUES ( @TenMH,@ViTri, @ID_LoaiHang)";
-                string sql = @"INSERT INTO PHIEUNHAP (SoLuong,NgayLap,ID_NhanVien,ID_Kho,ID_MatHang) VALUES (@SoLuong,@NgayLap,@ID_NhanVien,@ID_Kho,@ID_MatHang)    ";
+                string sql = @"INSERT INTO PHIEUXUAT (SoLuong,NgayLap,ID_NhanVien,ID_Kho,ID_MatHang) VALUES (@SoLuong,@NgayLap,@ID_NhanVien,@ID_Kho,@ID_MatHang)    ";
                 con.Open();
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.CommandType = CommandType.Text;
