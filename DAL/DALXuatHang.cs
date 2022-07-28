@@ -26,7 +26,7 @@ namespace DAL
             daa.Fill(dtMatHang);
             return dtMatHang;
         }
-        public bool nhapMatHang(int ID_MatHang, string SoLuong, DateTime NgayLap, string ID_NhanVien, string ID_Kho)
+        public bool nhapMatHang(int ID_MatHang, int SoLuong, DateTime NgayLap, int ID_NhanVien, int ID_Kho)
         {
             try
             {
@@ -35,29 +35,27 @@ namespace DAL
                 con.Open();
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add("@ID_MatHang", SqlDbType.NVarChar);
+                cmd.Parameters.Add("@ID_MatHang", SqlDbType.Int);
                 cmd.Parameters["@ID_MatHang"].Value = ID_MatHang;
-                cmd.Parameters.Add("@SoLuong", SqlDbType.NVarChar);
+                cmd.Parameters.Add("@SoLuong", SqlDbType.Int);
                 cmd.Parameters["@SoLuong"].Value = SoLuong;
-                cmd.Parameters.Add("@NgayLap", SqlDbType.NVarChar);
+                cmd.Parameters.Add("@NgayLap", SqlDbType.DateTime);
                 cmd.Parameters["@NgayLap"].Value = NgayLap;
-                cmd.Parameters.Add("@ID_NhanVien", SqlDbType.NVarChar);
+                cmd.Parameters.Add("@ID_NhanVien", SqlDbType.Int);
                 cmd.Parameters["@ID_NhanVien"].Value = ID_NhanVien;
-                cmd.Parameters.Add("@ID_Kho", SqlDbType.NVarChar);
+                cmd.Parameters.Add("@ID_Kho", SqlDbType.Int);
                 cmd.Parameters["@ID_Kho"].Value = ID_Kho;
                 /////update soluongton
                 ///
                 string update = @"update MATHANG set SoLuongTon=SoLuongTon-@SoLuong where ID=@ID_MatHang";
                 SqlCommand cmdd = new SqlCommand(update, con);
                 cmdd.CommandType = CommandType.Text;
-                cmdd.Parameters.Add("@ID_MatHang", SqlDbType.NVarChar);
+                cmdd.Parameters.Add("@ID_MatHang", SqlDbType.Int);
                 cmdd.Parameters["@ID_MatHang"].Value = ID_MatHang;
                 cmdd.Parameters.Add("@SoLuong", SqlDbType.Int);
                 cmdd.Parameters["@SoLuong"].Value = SoLuong;
+                cmd.ExecuteNonQuery();
                 cmdd.ExecuteNonQuery();
-                //int modified = (int)cmd.ExecuteScalar();
-                if (cmd.ExecuteNonQuery() > 0)
-                    return true;
                 con.Close();
             }
             catch (Exception e)

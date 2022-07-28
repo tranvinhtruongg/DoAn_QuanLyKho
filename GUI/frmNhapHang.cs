@@ -41,7 +41,7 @@ namespace GUI
             {
                 var idMH = cbmMH.SelectedValue as int? ?? 0;
                 //var mh=cbmMH.SelectedItem.
-                bll.nhapMatHang(idMH,txbSoLuong.Text,dtpNS.Value,txbNhanVien.Text,txbIDKho.Text);
+                bll.nhapMatHang(idMH,int.Parse(txbSoLuong.Text),dtpNS.Value, int.Parse(txbNhanVien.Text), int.Parse(txbIDKho.Text));
                 MessageBox.Show("Thêm thành công");
                 loadNhapHang();
                 //loadMH();
@@ -58,6 +58,11 @@ namespace GUI
             txbNhanVien.Text = "";
             txbSoLuong.Text = "";
             txbIDKho.Text = "";
+        }
+
+        private void dgvNhapMH_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
