@@ -92,6 +92,7 @@ namespace GUI
         private void btnLogout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Logout(this, new EventArgs());
+
         }
 
         private void frmChinh_Load(object sender, EventArgs e)

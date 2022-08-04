@@ -30,21 +30,41 @@ namespace GUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DA_QLKKDataSet2 = new GUI.DA_QLKKDataSet2();
+            this.DA_QLKKDataSet1 = new GUI.DA_QLKKDataSet1();
             this.PHIEUXUATBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.PHIEUXUATTableAdapter = new GUI.DA_QLKKDataSet2TableAdapters.PHIEUXUATTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.DA_QLKKDataSet2)).BeginInit();
+            this.PHIEUXUATTableAdapter = new GUI.DA_QLKKDataSet1TableAdapters.PHIEUXUATTableAdapter();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DA_QLKKDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PHIEUXUATBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(863, 450);
+            this.panel1.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.reportViewer1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(863, 450);
+            this.panel2.TabIndex = 2;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "phieuxuat";
-            reportDataSource2.Value = this.PHIEUXUATBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.PHIEUXUATBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "GUI.BaoCao.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -52,15 +72,15 @@ namespace GUI
             this.reportViewer1.Size = new System.Drawing.Size(863, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // DA_QLKKDataSet2
+            // DA_QLKKDataSet1
             // 
-            this.DA_QLKKDataSet2.DataSetName = "DA_QLKKDataSet2";
-            this.DA_QLKKDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.DA_QLKKDataSet1.DataSetName = "DA_QLKKDataSet1";
+            this.DA_QLKKDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // PHIEUXUATBindingSource
             // 
             this.PHIEUXUATBindingSource.DataMember = "PHIEUXUAT";
-            this.PHIEUXUATBindingSource.DataSource = this.DA_QLKKDataSet2;
+            this.PHIEUXUATBindingSource.DataSource = this.DA_QLKKDataSet1;
             // 
             // PHIEUXUATTableAdapter
             // 
@@ -72,22 +92,25 @@ namespace GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(863, 450);
-            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "Report";
             this.Text = "Report";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Report_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DA_QLKKDataSet2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DA_QLKKDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PHIEUXUATBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource PHIEUXUATBindingSource;
-        private DA_QLKKDataSet2 DA_QLKKDataSet2;
-        private DA_QLKKDataSet2TableAdapters.PHIEUXUATTableAdapter PHIEUXUATTableAdapter;
+        private DA_QLKKDataSet1 DA_QLKKDataSet1;
+        private DA_QLKKDataSet1TableAdapters.PHIEUXUATTableAdapter PHIEUXUATTableAdapter;
     }
 }

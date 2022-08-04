@@ -19,11 +19,14 @@ namespace GUI
 
         private void Report_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'DA_QLKKDataSet.PHIEUXUAT' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'DA_QLKKDataSet1.PHIEUXUAT' table. You can move, or remove it, as needed.
+            this.PHIEUXUATTableAdapter.Fill(this.DA_QLKKDataSet1.PHIEUXUAT);
+            //// TODO: This line of code loads data into the 'DA_QLKKDataSet.PHIEUXUAT' table. You can move, or remove it, as needed.
+            //this.PHIEUXUATTableAdapter.Fill(this.DA_QLKKDataSet.PHIEUXUAT);
+            //// TODO: This line of code loads data into the 'DA_QLKKDataSet1.MATHANG' table. You can move, or remove it, as needed.
+            //this.MATHANGTableAdapter.Fill(this.DA_QLKKDataSet1.MATHANG);
 
-
-            this.PHIEUXUATTableAdapter.Fill(this.DA_QLKKDataSet2.PHIEUXUAT);
-
+            //this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
         }
     }

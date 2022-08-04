@@ -115,13 +115,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DA_QLKKDataSet2.cs">
-      <DependentUpon>DA_QLKKDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DA_QLKKDataSet2.Designer.cs">
+    <Compile Include="DA_QLKKDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DA_QLKKDataSet2.xsd</DependentUpon>
+      <DependentUpon>DA_QLKKDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="frmChinh.cs">
       <SubType>Form</SubType>
@@ -229,16 +226,16 @@
       <DependentUpon>Report.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
-    <None Include="DA_QLKKDataSet2.xsc">
-      <DependentUpon>DA_QLKKDataSet2.xsd</DependentUpon>
+    <None Include="DA_QLKKDataSet1.xsc">
+      <DependentUpon>DA_QLKKDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="DA_QLKKDataSet2.xsd">
+    <None Include="DA_QLKKDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DA_QLKKDataSet2.Designer.cs</LastGenOutput>
+      <LastGenOutput>DA_QLKKDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DA_QLKKDataSet2.xss">
-      <DependentUpon>DA_QLKKDataSet2.xsd</DependentUpon>
+    <None Include="DA_QLKKDataSet1.xss">
+      <DependentUpon>DA_QLKKDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <Compile Include="Properties\Resources.Designer.cs">
